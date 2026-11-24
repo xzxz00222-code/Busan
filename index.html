@@ -519,11 +519,10 @@ function renderDays(sel){
     ${x.d===4?'<p style="margin:10px 0 0"><a href="#sindonga">👉 看新東亞海鮮完整攻略與預算</a></p>':''}
    </div>`).join('');
   const sd=document.getElementById('sindonga');if(sd)sd.style.display=(sel===0||sel===4)?'':'none';
-  store.set('day',sel);
 }
 document.getElementById('editorPhotos').innerHTML=DAYS.filter(x=>x.photo).map(x=>`<div class="local photo" style="margin-bottom:10px"><div class="lh">D${x.d}・${x.date}（${x.wd}）${x.title}</div><ul>${x.photo.map(l=>`<li><b>${l[0]}</b><div style="margin-top:2px">${l[1]}</div>${l[2]?`<div class="src">${l[2]}</div>`:''}</li>`).join('')}</ul></div>`).join('');
 document.getElementById('daybar').addEventListener('click',e=>{const b=e.target.closest('button');if(b){renderDays(+b.dataset.d);const y=document.getElementById('dayList').getBoundingClientRect().top+scrollY-120;if(scrollY>y)scrollTo({top:y,behavior:'smooth'})}});
-(function(){const now=new Date();let def=store.get('day',4);
+(function(){const now=new Date();let def=1;
   DAYS.forEach(x=>{const [mm,dd]=x.date.split('/');const dt=new Date(`2026-${mm.padStart(2,'0')}-${dd.padStart(2,'0')}T00:00:00+09:00`);if(now>=dt&&now-dt<864e5)def=x.d});
   renderDays(def)})();
 
