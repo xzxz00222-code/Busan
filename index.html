@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>🇰🇷 釜山五天四夜旅遊手冊｜2026/12/3–12/7</title>
+<style>
+:root{
+  --bg:#f4f8fb; --card:#fff; --ink:#1f2a33; --muted:#6a7a87; --line:#dbe6ee;
+  --navy:#1d4e89; --navy-soft:#e1ecf8; --coral:#e8604c; --coral-soft:#fde8e4;
+  --gold:#c8962e; --gold-soft:#f8efd7; --teal:#0f7b7b; --teal-soft:#dff2f0;
+  --d1:#2f6fd0; --d2:#e0703a; --d3:#8a7fb8; --d4:#d6455d; --d5:#5b6b7a;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:15.5px;-webkit-text-size-adjust:100%}
+a{color:var(--navy)}
+.wrap{max-width:760px;margin:0 auto;padding:0 14px 80px}
+img.cover{display:block;width:100%;max-height:420px;object-fit:cover;object-position:center}
+header.hero{background:linear-gradient(135deg,#1d4e89 0%,#2f7fc0 55%,#6cc3d5 100%);color:#fff;padding:28px 18px 22px;border-radius:0 0 26px 26px}
+.hero h1{margin:0 0 4px;font-size:1.55rem}
+.hero .sub{opacity:.92;font-size:.95rem}
+.count{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.count .box{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);border-radius:12px;padding:6px 10px;text-align:center;min-width:62px}
+.count .n{font-size:1.4rem;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+.count .l{font-size:.72rem;opacity:.9}
+.count .msg{align-self:center;font-size:.85rem}
+nav.jump{position:sticky;top:0;z-index:20;background:rgba(244,248,251,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin:0 -14px;padding:8px 14px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav.jump::-webkit-scrollbar{display:none}
+nav.jump a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.85rem;white-space:nowrap}
+section{scroll-margin-top:60px;margin-top:26px}
+h2{font-size:1.25rem;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+h3{font-size:1.05rem;margin:16px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px;margin-bottom:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:520px){.grid2{grid-template-columns:1fr}}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.93rem}
+.kv b{color:var(--muted);font-weight:500}
+.tag{display:inline-block;font-size:.75rem;padding:2px 8px;border-radius:999px;background:var(--gold-soft);color:#8a6414;margin:2px 4px 2px 0}
+.tag.t{background:var(--teal-soft);color:var(--teal)}
+.tag.r{background:var(--coral-soft);color:var(--coral)}
+.tag.n{background:var(--navy-soft);color:var(--navy)}
+.note{border-radius:12px;padding:10px 12px;font-size:.9rem;margin:10px 0}
+.note.imp{background:var(--coral-soft);border-left:4px solid var(--coral)}
+.note.tip{background:var(--teal-soft);border-left:4px solid var(--teal)}
+.note.gold{background:var(--gold-soft);border-left:4px solid var(--gold)}
+.flight{display:flex;align-items:center;gap:10px}
+.flight .ap{text-align:center;min-width:64px}
+.flight .ap .code{font-size:1.5rem;font-weight:700;letter-spacing:1px}
+.flight .ap .t{font-size:1.05rem;font-weight:600;color:var(--navy)}
+.flight .ap .c{font-size:.75rem;color:var(--muted)}
+.flight .mid{flex:1;text-align:center;font-size:.8rem;color:var(--muted)}
+.flight .mid .line{height:2px;background:repeating-linear-gradient(90deg,var(--navy) 0 6px,transparent 6px 10px);margin:4px 0}
+.copy{border:1px solid var(--line);background:#fff;border-radius:8px;padding:2px 8px;font-size:.78rem;cursor:pointer;color:var(--navy);margin-left:4px}
+.copy.ok{background:var(--navy);color:#fff;border-color:var(--navy)}
+.btn{border:1px solid var(--navy);background:var(--navy);color:#fff;border-radius:10px;padding:8px 14px;font-size:.9rem;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--navy)}
+.daybar{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:8px;scrollbar-width:none}
+.daybar::-webkit-scrollbar{display:none}
+.daybar button{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:12px;padding:6px 12px;font-size:.85rem;cursor:pointer;line-height:1.25;text-align:center}
+.daybar button small{display:block;font-size:.7rem;color:var(--muted)}
+.daybar button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.daybar button.on small{color:#cfdbe5}
+.day{border-left:6px solid var(--dc,var(--navy))}
+.day .dh h3{margin:0;font-size:1.1rem}
+.day .meta{font-size:.8rem;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;margin:4px 0 8px}
+.tl{list-style:none;margin:6px 0 0;padding:0}
+.tl li{display:grid;grid-template-columns:54px 1fr;gap:10px;padding:8px 0;border-top:1px dashed var(--line)}
+.tl li:first-child{border-top:0}
+.tl .tm{font-weight:700;color:var(--dc,var(--navy));font-size:.9rem}
+.tl .ti{font-weight:600}
+.tl .ds{font-size:.88rem;color:var(--muted)}
+.tl .pin{text-decoration:none;font-size:.8rem;margin-left:4px;white-space:nowrap}
+.meals{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.meals span{font-size:.78rem;background:#eef4f9;border:1px solid var(--line);border-radius:8px;padding:3px 8px}
+.local{background:#fff8ee;border:1px dashed #e7c98d;border-radius:12px;padding:6px 12px 8px;margin-top:10px}
+.local .lh{font-size:.88rem;font-weight:700;color:#8a6414;padding-top:4px}
+.local ul{margin:4px 0 0;padding-left:18px;font-size:.88rem}
+.local li{margin:3px 0}
+.local.buy{background:#eef7f6;border-color:#9fd1cc}
+.local.buy .lh{color:#0f6b66}
+.local.photo{background:#f4f0fb;border-color:#c9b8ea}
+.local.photo .lh{color:#5b3f9a}
+.tg{display:inline-block;font-size:.7rem;padding:1px 7px;border-radius:999px;margin-right:4px;vertical-align:middle}
+.tg.ap{background:#e1ecf8;color:#1d4e89}
+.tg.gn{background:#f8efd7;color:#8a6414}
+.local .src{font-size:.75rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+th{background:#eef4f9;color:var(--muted);font-weight:600;font-size:.8rem}
+.tbl{overflow-x:auto}
+.tbl table{min-width:480px}
+details{background:#fff;border:1px solid var(--line);border-radius:var(--radius);margin-bottom:10px;overflow:hidden}
+details>summary{cursor:pointer;padding:12px 15px;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"＋";color:var(--coral);font-weight:700}
+details[open]>summary::after{content:"－"}
+details .in{padding:0 15px 14px}
+input,select{font:inherit;border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:#fff;width:100%}
+.row{display:flex;gap:8px;align-items:center}
+.row>*{flex:1}
+.conv .out{font-size:1.5rem;font-weight:700;color:var(--navy);text-align:center;margin:8px 0 2px}
+.quick{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.quick button{border:1px solid var(--line);background:#eef4f9;border-radius:8px;padding:4px 10px;font-size:.82rem;cursor:pointer}
+.ledger-list .it{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-top:1px dashed var(--line);font-size:.88rem}
+.ledger-list .it .x{color:var(--coral);cursor:pointer;border:0;background:none;font-size:1rem}
+.bal{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:6px;margin-top:8px}
+.bal div{background:#eef4f9;border-radius:8px;padding:6px 8px;font-size:.82rem}
+.bal .pos{color:var(--teal);font-weight:700}
+.bal .neg{color:var(--coral);font-weight:700}
+.phr{display:grid;grid-template-columns:1fr auto;gap:4px 8px;align-items:center;padding:8px 0;border-top:1px dashed var(--line)}
+.phr:first-child{border-top:0}
+.phr .zh{font-weight:600}
+.phr .ko{font-size:1.15rem}
+.phr .rd{font-size:.8rem;color:var(--muted)}
+.check li{list-style:none;margin:4px 0}
+.check label{display:flex;gap:8px;align-items:flex-start;cursor:pointer}
+.check input{width:auto;margin-top:5px}
+.check input:checked+span{text-decoration:line-through;color:var(--muted)}
+.small{font-size:.82rem;color:var(--muted)}
+.big{font-size:1.3rem;font-weight:700}
+.bar{height:12px;border-radius:999px;background:#e6eef4;overflow:hidden;margin:6px 0}
+.bar i{display:block;height:100%;background:var(--teal);width:0}
+.bar i.over{background:var(--coral)}
+.toTop{position:fixed;right:14px;bottom:18px;background:var(--ink);color:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:1.1rem;cursor:pointer;z-index:30}
+footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
+</style>
+</head>
+<body>
+<img class="cover" src="cover.jpg" alt="2026 睿豐團隊釜山之旅" onerror="this.remove()">
+<header class="hero">
+  <div class="wrap" style="padding-bottom:0">
+    <h1>🇰🇷 釜山五天四夜旅遊手冊</h1>
+    <div class="sub">2026/12/3（四）– 12/7（一）｜東南旅遊跟團</div>
+    <div class="count" id="countdown"></div>
+  </div>
+</header>
+<div class="wrap">
+<nav class="jump">
+  <a href="#flight">✈ 航班</a><a href="#hotel">🏨 住宿</a><a href="#days">📅 每日行程</a>
+  <a href="#sindonga">🦀 新東亞</a><a href="#shop">🛍 必買</a><a href="#editor">📱 小編</a><a href="#tools">🧰 工具</a><a href="#tips">⚠ 提醒</a>
+</nav>
+
+<section id="flight">
+  <h2>✈ 航班</h2>
+  <div class="card">
+    <div class="small">去程｜12/3（四）｜濟州航空 7C6256</div>
+    <div class="flight"><div class="ap"><div class="code">KHH</div><div class="t">17:05</div><div class="c">高雄</div></div><div class="mid">約 2 小時 30 分<div class="line"></div>直飛</div><div class="ap"><div class="code">PUS</div><div class="t">20:35</div><div class="c">釜山金海</div></div></div>
+  </div>
+  <div class="card">
+    <div class="small">回程｜12/7（一）｜濟州航空 7C6255</div>
+    <div class="flight"><div class="ap"><div class="code">PUS</div><div class="t">14:05</div><div class="c">釜山金海</div></div><div class="mid">約 3 小時<div class="line"></div>直飛</div><div class="ap"><div class="code">KHH</div><div class="t">16:05</div><div class="c">高雄</div></div></div>
+  </div>
+  <div class="note gold">🧳 集合：12/3 <b>14:05</b>，小港國際航廈 3 樓，濟州航空由台勤櫃檯代理，找領隊。託運每人 1 件 20 公斤。護照效期要到 <b>2027/06/07</b> 之後。小費每人每天 NT$300，共 NT$1,500。<br>※ 來源：東南旅遊行前說明會頁面（2026/11/13 更新），時間以最新通知為準。</div>
+</section>
+
+<section id="hotel">
+  <h2>🏨 住宿</h2>
+  <div class="card">
+    <div class="kv"><b>飯店</b><span>central 7 hotel（連住 4 晚）</span><b>地址</b><span>777 Jungang-daero, Busanjin District, Busan <a class="pin" href="https://www.google.com/maps/search/?api=1&query=central%207%20hotel%20Busan" target="_blank" rel="noopener">📍地圖</a></span><b>電話</b><span>+82-51-930-1100 <button class="copy" data-copy="+82-51-930-1100">📋</button></span></div>
+    <div class="note tip">部分飯店不提供拖鞋、牙膏、牙刷，要自備。請勿在非指定處吸菸，否則飯店會請旅客付清潔費。</div>
+  </div>
+</section>
+
+<section id="days">
+  <h2>📅 每日行程</h2>
+  <div class="small" style="margin-bottom:8px">團體固定行程取自旅行社頁面；<b>🍴 在地推薦</b>是額外整理的吃喝逛，每項附來源，價格會變動請現場確認。</div>
+  <div class="daybar" id="daybar"></div>
+  <div id="dayList"></div>
+</section>
+
+<!-- ============ 新東亞 ============ -->
+<section id="sindonga">
+  <h2>🦀 D4 晚餐：新東亞水產市場（帝王蟹＋生蠔）</h2>
+  <div class="card">
+    <div class="note gold">資料來源：<b>打魚王翔哥</b>兩支影片（我讀的是轉錄稿），主推<b>新東亞市場 85、87 號攤</b>。價格是影片拍攝時的報價，<b>會變動，以現場為準</b>。</div>
+    <h3 style="margin-top:0">📍 位置與動線</h3>
+    <ul style="padding-left:18px;margin:0">
+      <li>新東亞市場在<b>南浦洞拱牌商圈正對面</b>，旁邊是札嘎其市場。第四天逛完南浦洞，走路就到。</li>
+      <li>翔哥說新東亞<b>幾乎每攤都會說中文</b>，買完不另加料理費；札嘎其則幾乎沒人說中文。</li>
+      <li><b>流程</b>：1 樓挑活海鮮 → 跟店家講好料理方式 → 上樓用餐（影片裡上到 3 樓），<b>加工費＋座位費另算</b>，影片中沒看到金額，請先問清楚。</li>
+      <li>影片說新東亞曾整修一個月，已完成，只動天花板。營業時間影片沒講，<b>請先查 Naver／Google 地圖</b>。</li>
+    </ul>
+    <h3>🦀 影片中的蟹價（韓元／公斤）</h3>
+    <div class="tbl"><table>
+      <tr><th>品項</th><th>影片 A（早餐＋市場）</th><th>影片 B（實際點餐）</th></tr>
+      <tr><td>金色帝王蟹（8 個點）</td><td>65,000</td><td>90,000</td></tr>
+      <tr><td>帝王蟹（一般）</td><td>85,000</td><td>—</td></tr>
+      <tr><td>藍色帝王蟹（4 個點，油蟹）</td><td>—</td><td>120,000</td></tr>
+      <tr><td>紅色帝王蟹（6 個點）</td><td>—</td><td>130,000～140,000</td></tr>
+      <tr><td>松葉蟹</td><td>—</td><td>70,000</td></tr>
+    </table></div>
+    <p class="small" style="margin-bottom:0">兩支影片價格不同，代表會浮動，不是誰錯。翔哥提醒：帝王蟹有 A／B／C 級，B 級不太新鮮、C 級少腳，要問清楚；店家說他們用 A 級。</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">🍽 影片裡其他可點的東西</h3>
+    <ul style="padding-left:18px;margin:0">
+      <li><b>野生鮑魚</b>：一顆約 20,000～30,000 韓元（養殖的較便宜）。</li>
+      <li><b>扇貝</b>：一大盤約 30,000 韓元，翔哥說 CP 值高。</li>
+      <li><b>蛤蜊湯／魚湯</b>：翔哥吃得很推薦；小份魚湯約 40,000 韓元。</li>
+      <li><b>清蒸魚</b>：影片中一尾隆頭魚 50,000 韓元，店家說清蒸最好吃。</li>
+      <li><b>生蠔</b>：影片菜單有生蠔，<b>兩支影片都沒有報價</b>，也沒查到可靠的價格來源，所以我不填數字，<b>請現場問價（問是一顆、一盤或一公斤）</b>。</li>
+    </ul>
+    <div class="note tip"><b>👧 帶小孩的建議：</b>生蠔、生魚片是生食，小孩吃前請自己斟酌。小孩可以選熟的：蛤蜊湯、清蒸魚、烤扇貝、蟹肉；蟹腳肉和蒸蟹給她們吃最安心。</div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">💰 預算試算（4 人，以翔哥那桌約 200,000 韓元當基準）</h3>
+    <p class="small" style="margin-top:0">影片裡 3 人點了約 110,000 韓元的食材（鮑魚、魚、扇貝、帝王蟹等另加），最後結帳我沒看到。下面請自己填「現場問到的價格」，它會幫你加總並換算台幣。</p>
+    <div class="row"><span style="flex:0 0 auto">預算</span><input id="bgt" type="number" inputmode="numeric" value="200000"><span style="flex:0 0 auto">韓元</span></div>
+    <div class="quick" id="presetCrab"></div>
+    <div class="grid2" style="margin-top:8px">
+      <input id="bName" placeholder="品項（例：金蟹）">
+      <input id="bPrice" type="number" inputmode="numeric" placeholder="單價（韓元／公斤或份）">
+      <input id="bQty" type="number" inputmode="decimal" step="0.1" placeholder="數量（公斤或份，例：1.2）" value="1">
+      <button class="btn" onclick="addBudget()">＋ 加入</button>
+    </div>
+    <div id="bList" class="ledger-list"></div>
+    <div id="bSum" style="margin-top:8px"></div>
+    <div class="bar"><i id="bBar"></i></div>
+    <p class="small" style="margin-bottom:0">記得另外加上：<b>加工費＋座位費</b>（現場問）、小菜飲料、<b>回飯店的車資</b>。</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">🚖 D4 晚上回飯店</h3>
+    <p style="margin:0">行程寫的是「南浦洞商圈後晚餐自理」，<b>集合時間、車子在哪接、要不要自己搭車回 central 7 hotel，我沒有看到資料</b>。請出發前或 D4 早上問領隊。吃完海鮮的味道和冬夜的冷，可以先想好用計程車或叫車。</p>
+  </div>
+</section>
+
+<section id="shop">
+  <h2>🛍 通用必買：零食與小物</h2>
+  <div class="small" style="margin-bottom:8px">每天景點旁的必買在「每日行程」各天的「🛍 今日必買」；這裡是哪天都能買的。</div>
+  <div class="card">
+    <h3 style="margin-top:0">👧 給女兒的零食（來源：Funliday Olive Young 整理）</h3>
+    <ul style="padding-left:18px;margin:0;font-size:.92rem">
+      <li>Olive Young：花椰菜餅乾脆球、水果乾、椰子巧克力片、貝果餅乾。</li>
+      <li>Daiso：迷你椪糖藥果、椰子洋芋片（約 1,000～2,000 韓元，文章標示有出入）。</li>
+      <li>便利商店：CU 鄰家小胖藥菓、GS25 扁可頌餅乾、玉米海苔脆片。</li>
+    </ul>
+  </div>
+</section>
+
+<section id="tools">
+  <h2>🧰 旅途工具</h2>
+
+  <div class="card conv">
+    <h3 style="margin-top:0">💱 韓元換算</h3>
+    <div class="row">
+      <input id="krw" type="number" inputmode="decimal" placeholder="韓元 KRW">
+      <span style="flex:0 0 auto">⇄</span>
+      <input id="twd" type="number" inputmode="decimal" placeholder="台幣 TWD">
+    </div>
+    <div class="out" id="convOut">—</div>
+    <div class="row small" style="margin-top:4px">
+      <span style="flex:0 0 auto">匯率 1 KRW =</span>
+      <input id="rate" type="number" step="0.0001" inputmode="decimal" style="max-width:110px">
+      <span style="flex:0 0 auto">TWD</span>
+    </div>
+    <div class="quick" id="quickKrw"></div>
+    <p class="small" style="margin-bottom:0">預設 0.0233 是翔哥影片裡「100 台幣約 4,300 韓元」換出來的參考值，不是即時匯率。出發前請改成你換匯銀行的現鈔賣出匯率（會記住）。</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">🧾 共同記帳・分帳（韓元）</h3>
+    <div class="small" style="margin-bottom:8px">成員用逗號分隔（會記住）；同一家人寫「名字×人數」，例：媽媽×2（1 大人＋1 小孩算 2 人）</div>
+    <input id="members" placeholder="例如：我×4, 朋友×2">
+    <div class="grid2" style="margin-top:8px">
+      <input id="lgItem" placeholder="項目（例：帝王蟹、計程車）">
+      <input id="lgAmt" type="number" inputmode="decimal" placeholder="金額（韓元）">
+      <select id="lgPayer"></select>
+      <select id="lgSplit"><option value="all">全員平分</option></select>
+    </div>
+    <div style="margin-top:8px;display:flex;gap:8px">
+      <button class="btn" onclick="addLedger()">＋ 新增</button>
+      <button class="btn ghost" onclick="clearLedger()">清空</button>
+    </div>
+    <div class="ledger-list" id="ledgerList"></div>
+    <div id="ledgerSum" class="small" style="margin-top:8px"></div>
+    <div class="bal" id="balance"></div>
+    <p class="small" style="margin-bottom:0">資料只存在這支手機的瀏覽器，換手機或清除瀏覽資料會不見。</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">🗣️ 韓語小幫手 <span class="small">（點 🔊 播放／📋 複製）</span></h3>
+    <div id="phrases"></div>
+    <div class="note tip" style="margin-bottom:0">發音是注音式的大概念，給店家看韓文最準。🔊 用手機內建語音，沒有韓語語音的手機不會顯示喇叭。</div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">✅ 出發前檢查清單</h3>
+    <ul class="check" id="checklist" style="padding:0;margin:0"></ul>
+  </div>
+</section>
+
+<section id="tips">
+  <h2>⚠ 重要提醒</h2>
+  <div class="card">
+    <h3 style="margin-top:0">🧥 12 月穿著（來源：Creatrip、uptogo）</h3>
+    <ul style="padding-left:18px;margin:0">
+      <li>白天約 5～10 度，早晚接近 0 度或更低，海風大、體感更冷，下雪機率低。</li>
+      <li>洋蔥式穿法，外層防風長版羽絨外套；帶圍巾、手套、護耳帽、暖暖包、護唇膏，穿防滑厚底靴。</li>
+      <li>室內和地鐵暖氣強，外套要好穿脫。<b>海邊景點（龍宮寺、青沙浦、白淺灘）風最大</b>，小孩要多一件。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">🧖 汗蒸幕（D3）</h3>
+    <p style="margin:0">行程註明：高、低血壓、心臟病患者及飲酒者要謹慎。<b>小孩和身體不適的人請在外面休息或縮短時間</b>，隨時補水。</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">🆘 緊急聯絡</h3>
+    <div class="kv"><b>領隊</b><span>聯絡方式見行前說明會頁面或旅行社 LINE 群組</span><b>旅外救助</b><span>800-0885-0885 <button class="copy" data-copy="800-0885-0885">📋</button></span><b>飯店</b><span>+82-51-930-1100</span></div>
+    <p class="small" style="margin-bottom:0">旅行社專屬 LINE 群組在行前說明會頁面的連結。</p>
+  </div>
+</section>
+
+<section id="editor" style="display:none">
+  <h2>📱 小編拍攝筆記 <button class="btn ghost" style="margin-left:auto;padding:4px 12px;font-size:.8rem" onclick="toggleEditor(false)">收起</button></h2>
+  <div class="small" style="margin-bottom:8px">這是我自己看的備忘，點上方「小編」才會展開。</div>
+  <h3 style="margin-top:0">📸 各日拍照景點（角度・排隊）</h3>
+  <div id="editorPhotos"></div>
+  <h3>📱 iPhone 拍攝設定</h3>
+  <div class="small" style="margin-bottom:8px"><span class="tg ap">Apple 官方</span>是 Apple 支援文件有寫的；<span class="tg gn">一般建議</span>是通用攝影經驗，不是 Apple 說的。選單名稱依 iOS 版本與機型會有差異。</div>
+
+  <details open><summary>📷 拍照設定</summary><div class="in"><ul style="padding-left:18px;margin:0;font-size:.92rem">
+    <li><b>格式</b>：<span class="tg ap">Apple 官方</span>設定 > 相機 > 格式，「高效率」（HEIF/HEVC）比 JPEG 省空間；要用攝影風格也建議用高效率。<span class="tg gn">一般建議</span>要上傳社群維持高效率即可；若同行者的舊電腦打不開，才改「最相容」。</li>
+    <li><b>解析度</b>：<span class="tg ap">Apple 官方</span>支援機型可選 12 MP／24 MP，48 MP 要開「解析度控制項目」。<span class="tg gn">一般建議</span>社群貼文 12 MP 就夠，省空間。</li>
+    <li><b>網格與水平儀</b>：<span class="tg ap">Apple 官方</span>設定 > 相機開「格線」「水平儀」。<span class="tg gn">一般建議</span>海平線、玻璃地板邊緣、建築物很容易歪，一定要開。</li>
+    <li><b>曝光與對焦鎖定</b>：<span class="tg ap">Apple 官方</span>點螢幕對焦，旁邊上下拖移曝光；<b>按住對焦區域直到出現「自動曝光/自動對焦鎖定」</b>；設定 > 相機 > 保留設定 > 開「曝光調整」，曝光不會每次重置。</li>
+    <li><b>HDR</b>：<span class="tg ap">Apple 官方</span>預設自動，連拍不同曝光合成，保留亮部和陰影細節。</li>
+    <li><b>攝影風格</b>：<span class="tg ap">Apple 官方</span>拍前選風格、調色調與色溫，要用高效率格式。<span class="tg gn">一般建議</span>整趟旅行固定同一個風格，社群帳號畫面比較一致。</li>
+    <li><b>Live Photo</b>：<span class="tg ap">Apple 官方</span>預設開，記錄拍照前後的瞬間；可設自動／開啟／關閉。開 Live Photo 或閃光燈時夜間模式會停用。<span class="tg gn">一般建議</span>浪花、海風可開，其他關掉省空間。</li>
+    <li><b>前鏡頭鏡像</b>：<span class="tg ap">Apple 官方</span>設定 > 相機 >「前置相機鏡像翻轉」，成品和觀景窗所見一致。<span class="tg gn">一般建議</span>背景有招牌文字再開，不然文字會反向。</li>
+    <li><b>微距、人像</b>：<span class="tg ap">Apple 官方</span>鏡頭靠近主體約 2 公分會自動切微距；人像模式可調景深和人像光線，拍完還能改。</li>
+  </ul></div></details>
+
+  <details><summary>🌊 海邊・逆光・日落・玻璃地板</summary><div class="in"><div class="small" style="margin-bottom:6px"><span class="tg gn">一般建議</span>Apple 官方沒有場景教學，下面是用 Apple 的工具（曝光滑桿、AE/AF 鎖定、網格）搭配的拍法。</div><ul style="padding-left:18px;margin:0;font-size:.92rem">
+    <li><b>海邊藍天白雲</b>：開網格，水平線對齊；點天空附近後<b>微降曝光</b>，保留雲的層次。</li>
+    <li><b>逆光・日落</b>：點太陽附近的亮處後下拉曝光，再按住鎖定 AE/AF。要拍<b>剪影</b>就點天空；要拍人臉就點臉，接受背景過亮。</li>
+    <li><b>天空玻璃地板</b>（青沙浦）：開網格和水平儀，拍腳下和遠方；注意手機和鏡頭的反光與倒影，換個角度避開。</li>
+    <li><b>彩色村落</b>（甘川洞）：往高處平台俯拍；人多時用連拍等空隙。</li>
+  </ul></div></details>
+
+  <details><summary>🌙 夜景與低溫（12 月釜山）</summary><div class="in"><ul style="padding-left:18px;margin:0;font-size:.92rem">
+    <li><b>夜間模式</b>：<span class="tg ap">Apple 官方</span>iPhone 11 以後可用，低光時自動開啟，畫面上方圖示變黃並顯示秒數；<b>拍攝時穩持手機或放穩固平面</b>，偵測到晃動會出現十字線可對齊。</li>
+    <li><b>低溫</b>：<span class="tg ap">Apple 官方</span>iPhone 設計使用環境溫度 0～35°C，更冷時續航力可能暫時縮短甚至關機，回到溫暖處會恢復。12 月釜山早晚可能接近 0°C。</li>
+    <li><span class="tg gn">一般建議</span>手機放貼身內袋，要拍再拿出來；行動電源也放保暖處；準備可觸控手套。Apple 沒寫具體保暖做法。</li>
+  </ul></div></details>
+
+  <details><summary>🎬 影片（給社群短影片）</summary><div class="in"><ul style="padding-left:18px;margin:0;font-size:.92rem">
+    <li><b>解析度與影格率</b>：<span class="tg ap">Apple 官方</span>錄影模式點螢幕上方的解析度／影格率切換；低光時 iPhone 可自動降到 24 fps（可在設定 > 相機 > 錄影調整「自動 FPS」）。<span class="tg gn">一般建議</span>直式短影片 4K 30 fps 最穩最省空間；動作多或想剪慢動作才用 60 fps。</li>
+    <li><b>動作模式</b>：<span class="tg ap">Apple 官方</span>邊走邊拍更穩，強光下效果最佳，最大 2.8K；低光要開「動作模式低光源」。</li>
+    <li><b>電影級模式</b>：<span class="tg ap">Apple 官方</span>預設 1080p 30 fps，可改 4K；錄完可在照片 App 改對焦點。</li>
+    <li><b>免持錄影</b>：<span class="tg ap">Apple 官方</span>拍照模式按住快門錄影，滑到鎖頭放開就持續錄；錄影中點快門可同時拍照。</li>
+    <li><b>好剪的鏡頭組合</b>：<span class="tg gn">一般建議</span>每個景點錄「全景 → 中景（動作）→ 特寫（細節）」各 5～10 秒；多錄一段不動的空鏡當轉場；直拍並預留標題和字幕的空間；整趟固定同一個解析度和 fps。</li>
+  </ul></div></details>
+
+  <details><summary>👧 帶小孩拍・出國備份</summary><div class="in"><ul style="padding-left:18px;margin:0;font-size:.92rem">
+    <li><b>連拍</b>：<span class="tg ap">Apple 官方</span>把快門按鈕<b>向左拖</b>連續快速拍，放開即停；挑選時灰點是建議保留。也可設定 > 相機開「連拍使用調高音量按鈕」。</li>
+    <li><b>快速開相機</b>：<span class="tg ap">Apple 官方</span>鎖定畫面向左滑，或按住鎖定畫面的相機按鈕。<span class="tg gn">一般建議</span>小孩動來動去，日光下連拍再慢慢挑。</li>
+    <li><b>儲存空間</b>：<span class="tg ap">Apple 官方</span>設定 > 一般 >「iPhone 儲存空間」查看用量；開 iCloud 照片時確認「最佳化 iPhone 儲存空間」。<span class="tg gn">一般建議</span>出國前先清空間，旅行中把照片同步到雲端或備份到行動硬碟。</li>
+    <li><b>AirDrop 傳給同行者</b>：<span class="tg ap">Apple 官方</span>雙方都開 Wi-Fi 和藍牙；照片 App 選照片 > 分享 > AirDrop > 點對方姓名，對方按「接受」。對方不是聯絡人時，請對方在控制中心把 AirDrop 設成「開放所有人 10 分鐘」。</li>
+  </ul><p class="small" style="margin-bottom:0">我沒有查到：AirDrop 傳照片會不會保留原始畫質、Apple 對「社群上傳要用 HEIF 還是 JPEG」的建議。</p></div></details>
+
+  <div class="card">
+    <h3 style="margin-top:0">📝 回國上傳社群的小提醒</h3>
+    <ul style="padding-left:18px;margin:0;font-size:.92rem">
+      <li>照片裡有<b>別人的臉</b>（甘川洞、汗蒸幕、市場）貼文前先確認或遮臉；<b>汗蒸幕和更衣區不要拍別人</b>。</li>
+      <li>標店家名或價格時，用我在網頁寫的來源與現場照片核對，價格會變動。</li>
+      <li>新東亞的價格標示拍下來當佐證，貼文才有依據。</li>
+    </ul>
+  </div>
+</section>
+
+<footer>🇰🇷 釜山旅遊手冊・資料為整理時的資訊，價格與營業時間以現場及官方公告為準</footer>
+</div>
+<button class="toTop" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+const store={get(k,d){try{const v=localStorage.getItem('busan26_'+k);return v===null?d:JSON.parse(v)}catch(e){return d}},
+set(k,v){try{localStorage.setItem('busan26_'+k,JSON.stringify(v))}catch(e){}}};
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* countdown：7C6256 17:05（台灣時間） */
+const DEP=new Date('2026-12-03T17:05:00+08:00'), RET=new Date('2026-12-07T16:05:00+08:00');
+function tick(){
+  const el=document.getElementById('countdown'),now=new Date(),ms=DEP-now;
+  if(ms>0){const d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4),s=Math.floor(ms%6e4/1e3);
+    el.innerHTML=[[d,'天'],[h,'時'],[m,'分'],[s,'秒']].map(([n,l])=>`<div class="box"><div class="n">${String(n).padStart(2,'0')}</div><div class="l">${l}</div></div>`).join('')+'<div class="msg">距離 7C6256 起飛</div>'}
+  else if(now<RET){el.innerHTML='<div class="msg">🧳 旅行進行中，玩得開心！</div>'}
+  else{el.innerHTML='<div class="msg">🏠 平安回家囉</div>'}
+}
+tick();setInterval(tick,1000);
+
+/* copy */
+function copyText(t,btn){
+  const done=()=>{if(!btn)return;const o=btn.textContent;btn.textContent='已複製';btn.classList.add('ok');setTimeout(()=>{btn.textContent=o;btn.classList.remove('ok')},1200)};
+  function fb(){const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(e){}ta.remove();done()}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(fb)}else fb();
+}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if(b)copyText(b.dataset.copy,b)});
+
+/* 點「新東亞」連結：先切到 D4 再捲過去 */
+document.addEventListener('click',e=>{const a=e.target.closest('a[href="#sindonga"]');if(a){e.preventDefault();renderDays(4);setTimeout(()=>document.getElementById('sindonga').scrollIntoView({behavior:'smooth'}),30)}});
+/* 小編區：預設隱藏，點上方「小編」展開 */
+function toggleEditor(show){const e=document.getElementById('editor');e.style.display=show?'':'none';if(show)e.scrollIntoView({behavior:'smooth'})}
+document.addEventListener('click',e=>{const a=e.target.closest('a[href="#editor"]');if(a){e.preventDefault();toggleEditor(true)}});
+/* ---------- days ---------- */
+const MQ=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
+const L=(t,u)=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`;
+const DAYS=[
+ {d:1,date:'12/3',wd:'四',title:'高雄出發・抵達釜山',c:'var(--d1)',
+  items:[
+   ['14:05','小港國際航廈 3 樓集合','濟州航空櫃檯（台勤代理），找領隊'],
+   ['17:05','高雄起飛','7C6256（台灣時間）'],
+   ['20:35','抵達釜山金海機場','韓國代表接機，入住 central 7 hotel','Gimhae International Airport']
+  ],meals:['早：—','午：—','晚：機上不供餐'],
+  local:[['晚餐','抵達約 20:35、入住會很晚，晚餐請先在台灣機場或飛機上解決（機上不供餐），或到飯店後問櫃檯附近的便利商店。這段我沒有查可靠來源，所以不列店。']]},
+ {d:2,date:'12/4',wd:'五',title:'白淺灘・海苔博物館・龍宮寺・樂天 Outlet',c:'var(--d2)',
+  items:[
+   ['上午','白淺灘文化村＋海岸散步路','韓戰難民聚落轉型的文化村，影島的海邊小路','Huinnyeoul Culture Village'],
+   ['','海苔博物館','魚糕 DIY（包起司或火腿再油炸）、韓服體驗；小孩會很愛','Gimbap Museum Busan'],
+   ['','海東龍宮寺','韓國少見建在海邊岩石上的寺廟，海風大，要多穿','Haedong Yonggungsa Temple'],
+   ['下午','樂天 OUTLET 東釜山店','奧西里亞園區，500 多個品牌，另有樂天超市、影城、美食區','Lotte Premium Outlets Dongbusan']
+  ],meals:['早：飯店','午：百年土種人蔘雞 ₩17,000','晚：豬肉湯飯 ₩10,000'],
+  photo:[
+   ['白淺灘文化村','<b>拍照點</b>：絕影海岸散步路（藍色地板）、海岸隧道（燈光會變色，有手放上去會發光的互動裝置，IG 熱門）、愛心階梯、彩虹階梯、展望台（可看港口的船）、壁畫與裝置藝術、電影《辯護人》取景處。作者認為在適當位置拍<b>背影</b>很有意境。<br><b>人潮</b>：比甘川洞少，但電影取景處、愛心階梯與隧道口常有人久佔拍照，可以先去別處再繞回來。<br><b>注意</b>：有居民居住，請輕聲；彩虹階梯後的石梯、木梯很長，小孩要留意；有一間咖啡廳標示不接待兒童。<br><b>查不到</b>：精確的最佳光線角度。','來源：'+L('Yahoo 旅遊','https://travel.yam.com/article/118787')],
+   ['海東龍宮寺','<b>拍照點</b>：入口要下 108 階才到寺，「日出岩」在階梯中段；寺內有十二生肖神像、觀音像、大雄寶殿。來源沒寫最佳角度。<br><b>人潮</b>：平日也很多人。<br><b>注意</b>：免費；階梯下雨很濕滑，海風大，不要越過圍欄。<b>無人機、腳架、寺內拍攝規定查不到</b>，請看現場告示。','來源：'+L('Yahoo 旅遊','https://travel.yam.com/article/137764')+'、'+L('uptogo','https://uptogo.com.tw/?p=528643')+'、'+L('鏡週刊','https://www.mirrormedia.mg/story/amp/20240317tour001')],
+   ['海苔博物館韓服體驗','<b>查不到</b>任何資料（連館名都對不上），請問領隊實際館名與流程。若想另外體驗，來源提到海雲台海恩韓服（持釜山通行證可免費 1 小時）、BEXCO 韓服體驗館，這兩項我只讀到搜尋摘要，行程沒排。','來源：'+L('Funliday','https://www.funliday.com/posts/?p=46193')]
+  ],
+  buy:[
+   ['樂天 Outlet 童裝／運動品牌','1F 有童裝和運動品牌；退稅是<b>個別店家</b>提供（Patagonia、Nordisk、Salomon、Levi\'s 等「事後免稅店」），結帳時直接問店員。最低金額、退稅櫃檯、外國遊客優惠券我查不到本店資料，請問服務台。','來源：'+L('ktriptips 免稅店清單','https://www.ktriptips.com/eng/shopping?p=47&s_ci=I')],
+   ['龍宮寺祈福瓦片','入口處可寫願望的祈福瓦片 10,000 韓元。','來源：'+L('Yahoo 旅遊','https://travel.yam.com/article/137764')],
+   ['樂天超市','uptogo 一篇文章說樂天 Outlet 館內有大型樂天超市；我只看到搜尋摘要，營業時間查不到，要買零食可現場確認。','來源：'+L('uptogo','https://uptogo.com.tw/旅遊/樂天outlet-釜山有超市嗎？/')]
+  ],
+  local:[
+   ['☕ 白淺灘','<b>ONDATA（온다타）</b>海景咖啡，招牌是 ONDATA 拿鐵，也有費南雪；地址 부산 영도구 흰여울길 123。旁邊 <b>흰여울점빵</b> 可以看海吃泡麵，小孩會覺得有趣。','來源：Yahoo 旅遊 '+L('文章','https://travel.yam.com/article/136945')],
+   ['🥐 白淺灘','<b>Aether</b> 純白落地窗咖啡，可頌是必吃；平日 10:00–21:00、假日 09:00–21:00。','來源：食尚玩家 '+L('文章','https://supertaste.tvbs.com.tw/asia/360017')],
+   ['🍢 龍宮寺入口','入口小吃街有黑糖餅、魚餅、熱狗、橘子汁。祈福瓦片 10,000 韓元。沒有正餐餐廳，所以吃小吃墊著。','來源：'+L('方格子','https://vocus.cc/article/6ac8f7ebfd897800014e4158')+'、'+L('Yahoo 旅遊','https://travel.yam.com/article/137764')]
+  ]},
+ {d:3,date:'12/5',wd:'六',title:'海雲台海洋列車・青沙浦・汗蒸幕・海雲台市場',c:'var(--d3)',
+  items:[
+   ['上午','海雲台藍線公園海洋觀光列車（單程券）','廢棄鐵道改成的海岸列車，全長 4.8 公里，海雲台到松亭'],
+   ['','青沙浦：灌籃高手鐵道＋紅白燈塔','拍照名景，風大','Cheongsapo Daritdol Observatory'],
+   ['','青沙浦踏石天空步道','72.5 公尺，尾端有半月形玻璃地板；遇天候或維修不開放會改去其他天空步道'],
+   ['下午','六星級 Club D Oasis 水療汗蒸幕','海雲台 LCT 大樓，休息區看海','Club D Oasis Busan'],
+   ['傍晚','海雲台傳統市場（美食大探索）','晚餐自理，可以直接在這邊吃','Haeundae Market']
+  ],meals:['早：飯店','午：明倫進士韓式烤肉吃到飽 ₩21,900','晚：自理（逛街方便）'],
+  photo:[
+   ['青沙浦：燈塔與踏石天空步道','<b>拍照點</b>：紅白雙燈塔與踏石海岸步道；踏石天空步道（踏石觀景台）從懸崖延伸出海面，前半是木棧道，<b>尾端是半月形透明玻璃地板</b>，高約 20 公尺（長度不同來源數字不一，不寫）；海月展望台（尾端有直徑 15 公尺的透明玻璃廣場），報導說是拍彩色列車的好角度。現場提供防滑鞋套。<br><b>注意</b>：風浪大、天氣不好步道可能關閉（行程註明會改去其他天空步道）。排隊與人數限制來源沒寫。<br><b>「灌籃高手鐵道」</b>：旅行社行程用這個說法，我查不到可靠來源指出是哪一處。有遊記說松亭站出口後的平交道像「釜山版灌籃高手」，但<b>車輛往來頻繁，拍照要注意安全，不要站進軌道</b>。','來源：'+L('uptogo','https://uptogo.com.tw/旅遊/釜山青沙浦/')+'、'+L('Yahoo 旅遊','https://travel.yam.com/article/114033')],
+   ['海雲台藍線公園：拍列車','你們是單程券。<b>角度</b>：美浦站軌道靠海側，視野開闊；有攻略推薦<b>尾浦→青沙浦</b>方向，理由是全程靠外海側（單一來源）；想拍膠囊列車全景，有攻略推薦尾浦周邊的 Dongbaek 104 咖啡廳（單一來源）。有部落格認為海岸列車的景色會被樹擋住。','來源：'+L('Creatrip','https://creatrip.com/en/blog/8890')+'、'+L('uptogo','https://uptogo.com.tw/旅遊/釜山青沙浦/')+'（兩站我只讀到搜尋摘要）'],
+   ['Club D Oasis 休息區','位於海雲台 LCT 大樓 4～6 樓，搭電梯到 5 樓進入；主題是「沙漠綠洲」，有無邊際泳池。<b>拍照點、角度、人潮與拍攝規定查不到</b>（水療和更衣區能不能拍，請先問現場，原則上不要拍到別人）。','來源：'+L('Funliday','https://www.funliday.com/posts/?p=27274')+'、'+L('TVBS','https://news.tvbs.com.tw/travel/2728300')]
+  ],
+  buy:[
+   ['Busan Bada Sand 奶油餅乾','多篇文章列為釜山第一名伴手禮；海雲台 Udong 1-ro 38beon-gil 11，1 樓。價格文中沒寫。','來源：'+L('HK01','https://www.hk01.com/旅遊/60300215/')],
+   ['Clam Sand 貝殼奶油餅乾','Cafe Grinabom，청사포로 128번길 8-7（青沙浦），順路買。','來源：'+L('HK01','https://www.hk01.com/旅遊/60300215/')],
+   ['二代名菓（이대명과）薄煎餅、匠人韓菓藥菓','前者 중동1로 15、後者 우동1로 50번길 8（海雲台）；價格文中沒寫。','來源：'+L('HK01','https://www.hk01.com/旅遊/60300215/')],
+   ['古來思魚糕（고래사어묵）','海雲台店 군암로 14，也可買魚糕當點心或伴手禮。','來源：'+L('NOL World','https://world.nol.com/en/content/pois/41a82fea-dbe3-4b1c-9bc9-9ea5d3f0982c')]
+  ],
+  local:[
+   ['🍢 魚糕','<b>古來思魚糕（고래사어묵）海雲台店</b>：魚糕烏龍麵約 7,000、魚糕辣湯麵約 7,500、起司麵包約 5,000 韓元；地址 군암로 14。','來源：'+L('NOL World','https://world.nol.com/en/content/pois/41a82fea-dbe3-4b1c-9bc9-9ea5d3f0982c')+'、'+L('HK01','https://www.hk01.com/旅遊/60300215/')],
+   ['🌶 市場','<b>상구기내（Sangguginae）辣炒年糕</b>：在市場內，Q 彈，曾上韓國美食節目。另外市場有炸物、麻花捲、餃子、豬肉湯飯、烤盲鰻一條街。市場在中洞 1 路 42-16，約 09:00–22:00。','來源：'+L('NOL World','https://world.nol.com/en/content/pois/4c6f4e97-f43a-472e-afc4-46459d55db1f')+'。<b>我的判斷</b>：烤盲鰻和豬肉湯飯偏重口味，小孩可以選年糕、炸物、魚糕。'],
+   ['☕ 青沙浦','<b>H.US Coffee</b>（燈塔旁，부산 해운대구 청사포로 135）：青沙浦藍色漸層磅蛋糕 6,500、Nutty Crumble 6,200、藍色檸檬氣泡飲 6,800 韓元。','來源：Yahoo 旅遊 '+L('文章','https://travel.yam.com/article/130940')]
+  ]},
+ {d:4,date:'12/6',wd:'日',title:'甘川洞・龍頭山・南浦洞 → 新東亞海鮮',c:'var(--d4)',
+  items:[
+   ['上午','甘川洞彩繪村','釜山的聖托里尼，階梯式村莊，有贈送地圖；坡多，穿好走的防滑鞋','Gamcheon Culture Village'],
+   ['','時尚彩妝店（購物站）','店內有人導覽，不想買可以先和領隊說'],
+   ['下午','龍頭山公園＋釜山塔','不含展望台門票；從南浦站 7 號出口沿光復路走約 3 分鐘，搭手扶梯上','Yongdusan Park Busan Tower'],
+   ['','南浦洞商圈','國際市場、光復洞時裝街、BIFF 國際電影廣場','BIFF Square Busan'],
+   ['傍晚','🦀 新東亞水產市場（自理晚餐）','南浦洞拱牌正對面；挑海鮮上樓料理。細節與預算見下方「新東亞」區塊','Sindonga Fish Market Busan']
+  ],meals:['早：飯店','午：龍蝦一隻雞海鮮鍋（龍蝦 2 人 1 隻）₩38,000','晚：自理 → 新東亞'],
+  note:'⚠ 午餐已經吃海鮮鍋（含龍蝦），晚餐又要吃蟹，可以午餐吃八分飽；晚餐前在南浦洞逛街消化。回飯店的方式請先問領隊。',
+  photo:[
+   ['甘川洞文化村','<b>最熱門</b>：<b>小王子與沙漠狐狸雕像</b>，雕像下方的平台可以俯拍彩色村落；另有「穿越胡同的魚」壁畫。一位部落客推薦觀景台的新小王子雕像，說開放時間有限、他排了約 20 分鐘（單一說法）。<br><b>排隊</b>：小王子的排隊時間各說不一：不到 10 分鐘到 30 分鐘以上、隊伍約 50 人都有人寫，所以<b>預留 10～30 分鐘</b>。<br><b>地圖與蓋章</b>：遊客中心賣的地圖約 2,000 韓元，標示拍照點；沿途有 12 個印章點，集滿回遊客中心換明信片。你們的行程贈送地圖，團體通常由導遊發放。<br><b>查不到</b>：帶小孩合拍的專門建議。','來源：'+L('Creatrip','https://creatrip.com/zh-CN/blog/470')+'、'+L('Yahoo 旅遊','https://travel.yam.com/place/5315')+'、'+L('Ladyironchef','https://ladyironchef.com/2025/01/gamcheon-cultural-village')+'、'+L('Trip.com','https://id.trip.com/moments/poi-little-prince-and-desert-fox-statue-147468762')],
+   ['龍頭山公園／釜山塔','釜山塔身會隨時間變色，<b>入夜後有投影與燈光秀，夜景更漂亮</b>。觀景台高 120 公尺，可 360 度俯瞰釜山港，成人 12,000、兒童與 65 歲以上 9,000 韓元（行程不含展望台門票）。公園本身的專屬拍照點來源沒寫。','來源：'+L('Funtime','https://www.funtime.com.tw/blog/funtime/nampo-dong-route')+'、'+L('Yahoo 旅遊','https://travel.yam.com/article/117552')],
+   ['南浦洞／BIFF 廣場','BIFF 廣場<b>地面鑲嵌電影人手印</b>，旁邊有糖餅攤；樂天百貨光復店<b>頂樓空中花園展望台</b>可看釜山港、影島大橋與釜山塔。BIFF 的人潮與最佳光線來源沒寫。','來源：'+L('Funtime','https://www.funtime.com.tw/blog/funtime/nampo-dong-route')+'、'+L('Funliday','https://www.funliday.com/posts/busan-spots-2025/')]
+  ],
+  buy:[
+   ['BIFF 廣場襪子攤','卡通襪約 1,000～2,500 韓元一雙，小朋友小禮物。現金為主。','來源：'+L('Hallyu 整理','https://southkoreahallyu.com/busan-biff-square-nampo/')],
+   ['ARTBOX（光復店）、HBAF 杏仁果（光復店）','ARTBOX 是文具禮品店；HBAF 有杏仁果零食，店裡有公仔可合照。','來源：'+L('Hallyu 整理','https://southkoreahallyu.com/busan-biff-square-nampo/')],
+   ['Olive Young（光復店）','美妝保養與零食；兩個女兒可挑花椰菜餅乾脆球、水果乾、椰子巧克力片、貝果餅乾（Funliday 整理，價格文中沒寫）。','來源：'+L('Funliday','https://www.funliday.com/posts/2026-korea-oliveyoung/')+'、'+L('Hallyu 整理','https://southkoreahallyu.com/busan-biff-square-nampo/')],
+   ['古來思魚糕（南浦／札嘎其附近分店）','魚糕串從 3,300 韓元起，天冷當點心，也可買包裝魚糕。','來源：'+L('Hallyu 整理','https://southkoreahallyu.com/busan-biff-square-nampo/')],
+   ['樂天百貨光復店超市','在樂天百貨地下；價位偏高，大量採購建議去別處。','來源：'+L('uptogo','https://uptogo.com.tw/美食/釜山零食/')],
+   ['彩妝店（行程購物站）','D4 上午的購物站，有人導覽，不想買可以先跟領隊說。','來源：旅行社行程']
+  ],
+  local:[
+   ['🥞 BIFF 廣場','<b>씨앗호떡（種子黑糖餡餅）</b>：多數攤約 2,000 韓元，內餡有葵花籽、南瓜籽、芝麻、杏仁、花生，油炸偏甜，小孩愛吃。可去 <b>진짜 원조 아저씨 씨앗호떡</b>（BIFF 廣場 36 號，札嘎其站走約 3 分鐘）。現金為主。','來源：'+L('Hallyu 整理','https://southkoreahallyu.com/busan-biff-square-nampo/')+'、'+L('NOL World','https://world.nol.com/en/content/pois/c4518a16-7d5e-4dd4-a474-0903b74524aa')],
+   ['🍢 魚糕','<b>古來思魚糕（고래사어묵）</b>：串從 3,300 韓元起，南浦和札嘎其附近有分店。魚糕是冬天代表的街頭小吃，天冷吃熱的。','來源：'+L('Hallyu 整理','https://southkoreahallyu.com/busan-biff-square-nampo/')],
+   ['🍜 小吃街','阿里郎小吃街（國際市場旁）有刀削麵、餃子、紫菜飯卷、蔥餅；光復洞小吃街有煎餃、烤小章魚。價格來源沒寫。','來源：'+L('Hallyu 整理','https://southkoreahallyu.com/busan-biff-square-nampo/')],
+   ['☕ 甘川洞','<b>CAFE AVANT GARDE</b>（達克瓦茲 2,500 韓元／個）、<b>The Plate</b>（二樓窗邊看村落，英式早餐 11,000、炸魚薯條 13,000 韓元）、<b>BIBIBIM</b>（村口，有甜米露，09:30–18:00）。','來源：Creatrip '+L('文章 1','https://creatrip.com/hk/blog/5829')+'、'+L('文章 2','https://creatrip.com/zh-TW/blog/14225')+'（只讀到搜尋摘要）'],
+   ['🎮 小孩','BIFF 廣場有 <b>VAMS 電玩中心</b>、<b>Photogray 拍貼機</b>；<b>樂天百貨光復店</b> 13 樓展望台免費，有噴泉秀；<b>釜山電影博物館</b>。','來源：'+L('Hallyu 整理','https://southkoreahallyu.com/busan-biff-square-nampo/')]
+  ]},
+ {d:5,date:'12/7',wd:'一',title:'返台',c:'var(--d5)',
+  items:[
+   ['上午','早餐後退房前往金海機場','集合時間以領隊通知為準；金海機場辦完手續前，記得把最後的韓元花掉或換回'],
+   ['14:05','釜山起飛','7C6255'],
+   ['16:05','抵達高雄','台灣時間']
+  ],meals:['早：飯店','午：機上不供餐','晚：—'],
+  buy:[
+   ['最後採買','這天只有早餐和去機場，我沒查到機場內可靠的必買資料。<b>想買的前一天（D4）在南浦洞先買好</b>。']
+  ],
+  local:[['🍪 最後採買','伴手禮可在前一天先買好（見「必買」）。這天只有早餐和去機場，我沒有安排額外景點。']]}
+];
+const li=i=>`<li><div class="tm">${i[0]}</div><div><div class="ti">${i[1]}${i[3]?`<a class="pin" href="${MQ(i[3])}" target="_blank" rel="noopener">📍地圖</a>`:''}</div><div class="ds">${i[2]||''}</div></div></li>`;
+function renderDays(sel){
+  document.getElementById('daybar').innerHTML=`<button data-d="0" class="${sel===0?'on':''}">全部<small>5 天</small></button>`+
+    DAYS.map(x=>`<button data-d="${x.d}" class="${sel===x.d?'on':''}">D${x.d} ${x.date}<small>週${x.wd}</small></button>`).join('');
+  document.getElementById('dayList').innerHTML=DAYS.filter(x=>!sel||x.d===sel).map(x=>`
+   <div class="card day" style="--dc:${x.c}">
+    <div class="dh"><h3>Day ${x.d}・${x.date}（${x.wd}）${x.title}</h3></div>
+    <div class="meta"><span>🏨 central 7 hotel</span><span>🌡️ 約 0～10°C</span></div>
+    ${x.note?`<div class="note imp" style="margin:4px 0 6px">${x.note}</div>`:''}
+    <ul class="tl">${x.items.map(li).join('')}</ul>
+    <div class="meals">${x.meals.map(m=>`<span>🍽️ ${m}</span>`).join('')}</div>
+    ${x.buy?`<div class="local buy"><div class="lh">🛍 今日必買</div><ul>${x.buy.map(l=>`<li><b>${l[0]}</b> ${l[1]}${l[2]?`<div class="src">${l[2]}</div>`:''}</li>`).join('')}</ul></div>`:''}
+    ${x.local?`<div class="local"><div class="lh">🍴 在地推薦（吃喝逛）</div><ul>${x.local.map(l=>`<li><b>${l[0]}</b> ${l[1]}${l[2]?`<div class="src">${l[2]}</div>`:''}</li>`).join('')}</ul></div>`:''}
+    ${x.d===4?'<p style="margin:10px 0 0"><a href="#sindonga">👉 看新東亞海鮮完整攻略與預算</a></p>':''}
+   </div>`).join('');
+  const sd=document.getElementById('sindonga');if(sd)sd.style.display=(sel===0||sel===4)?'':'none';
+  store.set('day',sel);
+}
+document.getElementById('editorPhotos').innerHTML=DAYS.filter(x=>x.photo).map(x=>`<div class="local photo" style="margin-bottom:10px"><div class="lh">D${x.d}・${x.date}（${x.wd}）${x.title}</div><ul>${x.photo.map(l=>`<li><b>${l[0]}</b><div style="margin-top:2px">${l[1]}</div>${l[2]?`<div class="src">${l[2]}</div>`:''}</li>`).join('')}</ul></div>`).join('');
+document.getElementById('daybar').addEventListener('click',e=>{const b=e.target.closest('button');if(b){renderDays(+b.dataset.d);const y=document.getElementById('dayList').getBoundingClientRect().top+scrollY-120;if(scrollY>y)scrollTo({top:y,behavior:'smooth'})}});
+(function(){const now=new Date();let def=store.get('day',4);
+  DAYS.forEach(x=>{const [mm,dd]=x.date.split('/');const dt=new Date(`2026-${mm.padStart(2,'0')}-${dd.padStart(2,'0')}T00:00:00+09:00`);if(now>=dt&&now-dt<864e5)def=x.d});
+  renderDays(def)})();
+
+/* ---------- 韓元換算 ---------- */
+const rateEl=document.getElementById('rate'),krw=document.getElementById('krw'),twd=document.getElementById('twd'),out=document.getElementById('convOut');
+rateEl.value=store.get('rate',0.0233);
+const RATE=()=>parseFloat(rateEl.value)||0.0233;
+function conv(from){const r=RATE();
+  if(from==='krw'){const v=parseFloat(krw.value);twd.value=isNaN(v)?'':Math.round(v*r)}
+  else{const v=parseFloat(twd.value);krw.value=isNaN(v)||!r?'':Math.round(v/r)}
+  out.textContent=krw.value?`₩${(+krw.value).toLocaleString()} ≈ NT$${(+twd.value).toLocaleString()}`:'—'}
+krw.oninput=()=>conv('krw');twd.oninput=()=>conv('twd');
+rateEl.oninput=()=>{store.set('rate',parseFloat(rateEl.value)||0.0233);conv('krw');renderBudget();renderLedger()};
+document.getElementById('quickKrw').innerHTML=[1000,2000,5000,10000,30000,100000].map(v=>`<button data-v="${v}">₩${v.toLocaleString()}</button>`).join('');
+document.getElementById('quickKrw').onclick=e=>{const b=e.target.closest('button');if(b){krw.value=b.dataset.v;conv('krw')}};
+
+/* ---------- 新東亞預算 ---------- */
+const bgt=document.getElementById('bgt');bgt.value=store.get('bgt',200000);
+let bud=store.get('bud',[]);
+const PRESETS=[['金蟹',90000],['藍蟹',120000],['紅蟹',135000],['松葉蟹',70000],['野生鮑魚',25000],['扇貝（一盤）',30000],['魚湯（小）',40000],['清蒸魚',50000]];
+document.getElementById('presetCrab').innerHTML=PRESETS.map((p,i)=>`<button data-i="${i}">${p[0]} ₩${p[1].toLocaleString()}</button>`).join('');
+document.getElementById('presetCrab').onclick=e=>{const b=e.target.closest('button');if(b){const p=PRESETS[+b.dataset.i];document.getElementById('bName').value=p[0];document.getElementById('bPrice').value=p[1]}};
+function addBudget(){const name=document.getElementById('bName').value.trim()||'未命名',price=parseFloat(document.getElementById('bPrice').value),qty=parseFloat(document.getElementById('bQty').value)||1;
+  if(!(price>0)){document.getElementById('bSum').textContent='請先輸入單價（韓元）';return}
+  bud.push({name,price,qty});store.set('bud',bud);document.getElementById('bName').value='';document.getElementById('bPrice').value='';document.getElementById('bQty').value=1;renderBudget()}
+function renderBudget(){
+  document.getElementById('bList').innerHTML=bud.map((x,i)=>`<div class="it"><span>${esc(x.name)}<br><span class="small">₩${x.price.toLocaleString()} × ${x.qty}</span></span><span>₩${Math.round(x.price*x.qty).toLocaleString()} <button class="x" data-i="${i}">✕</button></span></div>`).join('')||'<div class="small">還沒有品項。點上面的預設價，或自己輸入現場問到的價格（生蠔價格請自填）。</div>';
+  const tot=bud.reduce((s,x)=>s+x.price*x.qty,0),b=parseFloat(bgt.value)||0,r=RATE();
+  document.getElementById('bSum').innerHTML=`<span class="big">₩${Math.round(tot).toLocaleString()}</span> ≈ NT$${Math.round(tot*r).toLocaleString()}　<span class="small">預算 ₩${b.toLocaleString()}（≈ NT$${Math.round(b*r).toLocaleString()}），${tot>b?'<b style="color:var(--coral)">超出 ₩'+Math.round(tot-b).toLocaleString()+'</b>':'剩 ₩'+Math.round(b-tot).toLocaleString()}</span>`;
+  const bar=document.getElementById('bBar');bar.style.width=b?Math.min(100,tot/b*100)+'%':'0';bar.className=tot>b?'over':'';
+}
+document.getElementById('bList').onclick=e=>{const x=e.target.closest('.x');if(x){bud.splice(+x.dataset.i,1);store.set('bud',bud);renderBudget()}};
+bgt.oninput=()=>{store.set('bgt',parseFloat(bgt.value)||0);renderBudget()};
+renderBudget();
+
+/* ---------- 記帳 ---------- */
+const mEl=document.getElementById('members');
+mEl.value=store.get('members','')||'我×4';
+let ledger=store.get('ledger',[]);
+function parseM(){return mEl.value.split(/[,，、]/).map(s=>s.trim()).filter(Boolean).map(s=>{const m=s.match(/^(.+?)\s*[×xX＊*]\s*(\d+)\s*(人)?$/);return m?{n:m[1].trim(),w:+m[2]}:{n:s,w:1}})}
+const members=()=>parseM().map(o=>o.n);
+const weight=n=>{const o=parseM().find(o=>o.n===n);return o?o.w:1};
+const label=n=>{const w=weight(n);return w>1?`${n}（${w}人）`:n};
+function fillSel(){const ms=members();
+  document.getElementById('lgPayer').innerHTML=ms.length?ms.map(m=>`<option value="${esc(m)}">${esc(label(m))}</option>`).join(''):'<option value="">先輸入成員</option>';
+  document.getElementById('lgSplit').innerHTML='<option value="all">全員平分（按人頭）</option>'+ms.map(m=>`<option value="${esc(m)}">只算 ${esc(label(m))}</option>`).join('')}
+function renderLedger(){
+  const ms=members();
+  document.getElementById('ledgerList').innerHTML=ledger.map((x,i)=>`<div class="it"><span>${esc(x.item)}<br><span class="small">${esc(x.payer)} 付・${x.split==='all'?'全員平分':'只算 '+esc(x.split)}</span></span><span>₩${x.amt.toLocaleString()} <button class="x" data-i="${i}">✕</button></span></div>`).join('')||'<div class="small">還沒有記錄</div>';
+  const total=ledger.reduce((s,x)=>s+x.amt,0);
+  document.getElementById('ledgerSum').textContent=ledger.length?`總計 ₩${total.toLocaleString()}（≈ NT$${Math.round(total*RATE()).toLocaleString()}）`:'';
+  const bal={};ms.forEach(m=>bal[m]=0);
+  ledger.forEach(x=>{if(bal[x.payer]===undefined)bal[x.payer]=0;bal[x.payer]+=x.amt;
+    const who=x.split==='all'?ms:[x.split];if(!who.length)return;const tw=x.split==='all'?who.reduce((a,w)=>a+weight(w),0):1;
+    who.forEach(w=>{if(bal[w]===undefined)bal[w]=0;bal[w]-=x.amt*(x.split==='all'?weight(w):1)/tw})});
+  document.getElementById('balance').innerHTML=ledger.length?Object.entries(bal).map(([k,v])=>`<div>${esc(label(k))}<br><span class="${v>=0?'pos':'neg'}">${v>=0?'應收':'應付'} ₩${Math.abs(Math.round(v)).toLocaleString()}</span></div>`).join(''):'';
+}
+document.getElementById('ledgerList').onclick=e=>{const b=e.target.closest('.x');if(b){ledger.splice(+b.dataset.i,1);store.set('ledger',ledger);renderLedger()}};
+mEl.oninput=()=>{store.set('members',mEl.value);fillSel();renderLedger()};
+function addLedger(){const item=document.getElementById('lgItem').value.trim()||'未命名',amt=parseFloat(document.getElementById('lgAmt').value),payer=document.getElementById('lgPayer').value,split=document.getElementById('lgSplit').value;
+  if(!payer||!(amt>0))return;
+  ledger.push({item,amt,payer,split});store.set('ledger',ledger);document.getElementById('lgItem').value='';document.getElementById('lgAmt').value='';renderLedger()}
+function clearLedger(){if(confirm('確定清空所有記帳？')){ledger=[];store.set('ledger',ledger);renderLedger()}}
+fillSel();renderLedger();
+
+/* ---------- 韓語小幫手 ---------- */
+const PH=[
+ ['你好','안녕하세요','an-nyeong-ha-se-yo（安寧哈誰唷）'],
+ ['謝謝','감사합니다','kam-sa-ham-ni-da（砍沙哈咪達）'],
+ ['多少錢？','얼마예요?','eol-ma-ye-yo（歐兒媽耶唷）'],
+ ['可以算便宜一點嗎？','좀 깎아 주세요','jom kka-kka ju-se-yo（炯 嘎嘎 租誰唷）'],
+ ['請給我這個','이거 주세요','i-geo ju-se-yo（衣狗 租誰唷）'],
+ ['不要辣','안 맵게 해 주세요','an maep-ge hae ju-se-yo（安 美給 黑 租誰唷）'],
+ ['請蒸熟／煮熟','익혀 주세요','i-kyeo ju-se-yo（衣可唷 租誰唷）'],
+ ['請幫我料理（加工）這個','이거 요리해 주세요','i-geo yo-ri-hae ju-se-yo（衣狗 唷里黑 租誰唷）'],
+ ['加工費和座位費多少？','요리비랑 자리값은 얼마예요?','yo-ri-bi-rang ja-ri-gap-eun eol-ma-ye-yo'],
+ ['1 公斤多少錢？','1킬로에 얼마예요?','han kil-lo-e eol-ma-ye-yo'],
+ ['請幫我秤重','무게 재 주세요','mu-ge jae ju-se-yo（姆給 賊 租誰唷）'],
+ ['請給我水','물 주세요','mul ju-se-yo（母兒 租誰唷）'],
+ ['請結帳','계산해 주세요','gye-san-hae ju-se-yo（給三黑 租誰唷）'],
+ ['好吃！','맛있어요!','ma-si-sseo-yo（馬西搜唷）'],
+ ['廁所在哪裡？','화장실이 어디예요?','hwa-jang-si-ri eo-di-ye-yo'],
+ ['可以刷卡嗎？','카드 돼요?','ka-deu dwae-yo（卡的 腿唷）'],
+ ['請去這個地址（計程車）','여기로 가 주세요','yeo-gi-ro ga ju-se-yo（唷gi 囉 卡 租誰唷）']
+];
+const canSpeak='speechSynthesis' in window;
+function say(t){if(!canSpeak)return;try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='ko-KR';u.rate=.85;speechSynthesis.speak(u)}catch(e){}}
+document.getElementById('phrases').innerHTML=PH.map((p,i)=>`<div class="phr"><div><div class="zh">${p[0]}</div><div class="ko">${p[1]}</div><div class="rd">${p[2]}</div></div><div style="white-space:nowrap">${canSpeak?`<button class="copy" onclick="say(PH[${i}][1])">🔊</button>`:''}<button class="copy" data-copy="${p[1]}">📋</button></div></div>`).join('');
+
+/* ---------- 檢查清單 ---------- */
+function checklist(id,items,key){
+  const st=store.get(key,{});
+  document.getElementById(id).innerHTML=items.map((t,i)=>`<li><label><input type="checkbox" data-i="${i}" ${st[i]?'checked':''}><span>${t}</span></label></li>`).join('');
+  document.getElementById(id).onchange=e=>{const s=store.get(key,{});s[e.target.dataset.i]=e.target.checked;store.set(key,s)};
+}
+checklist('checklist',['護照（效期需到 2027/06/07 之後）','機票確認 7C6256／7C6255','旅平險＋旅遊不便險','韓元現金（市場、小吃、現金攤用）','信用卡（確認海外手續費）','網卡／eSIM','防風羽絨外套、圍巾、手套、護耳帽','暖暖包、護唇膏','防滑厚底鞋','拖鞋、牙刷牙膏（飯店不一定提供）','行動電源（放隨身行李）、韓國插頭轉接','個人藥品、兩個女兒的常備藥','小孩備用衣物（海邊風大、汗蒸幕）','問領隊 D4 晚上集合與回飯店方式','查新東亞營業時間（Naver／Google 地圖）','小費 NT$1,500（每人每天 300）'],'chk');
+</script>
+</body>
+</html>
