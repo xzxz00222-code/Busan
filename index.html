@@ -139,7 +139,7 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
 <div class="wrap">
 <nav class="jump">
   <a href="#flight">✈ 航班</a><a href="#hotel">🏨 住宿</a><a href="#days">📅 每日行程</a>
-  <a href="#sindonga">🦀 新東亞・札嘎其</a><a href="#shop">🛍 必買</a><a href="#tools">🧰 工具</a><a href="#tips">⚠ 提醒</a><a href="#editor">📱 小編</a>
+  <a href="#sindonga">🦀 新東亞・札嘎其</a><a href="#tools">🧰 工具</a><a href="#tips">⚠ 提醒</a><a href="#editor">📱 小編</a>
 </nav>
 
 <section id="flight">
@@ -233,28 +233,11 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
       <li><b>扇貝</b>：一大盤約 30,000 韓元，翔哥說 CP 值高。</li>
       <li><b>蛤蜊湯／魚湯</b>：翔哥吃得很推薦；小份魚湯約 40,000 韓元。</li>
       <li><b>清蒸魚</b>：影片中一尾隆頭魚 50,000 韓元，店家說清蒸最好吃。</li>
-      <li><b>生蠔</b>：影片菜單有生蠔，<b>請現場問價（問是一顆、一盤或一公斤）</b>，再填進下面的預算試算。</li>
+      <li><b>生蠔</b>：影片菜單有生蠔，<b>請現場問價（問是一顆、一盤或一公斤）</b>。</li>
     </ul>
     <div class="note tip"><b>👧 帶小孩的建議：</b>生蠔、生魚片是生食，小孩吃前請自己斟酌。小孩可以選熟的：蛤蜊湯、清蒸魚、烤扇貝、蟹肉；蟹腳肉和蒸蟹給她們吃最安心。</div>
     </div></details>
     <p class="small" style="margin:8px 0 0">來源：翔哥兩支影片；新東亞樓層與營業：<a href="https://world.nol.com/en/content/pois/a888acb1-9cb0-468c-b473-702112cd6983" target="_blank" rel="noopener">NOL World</a>、<a href="https://www.ktriptips.com/kor/shopping/132576" target="_blank" rel="noopener">ktriptips</a>；札嘎其費用與營業：<a href="https://vibekorea.tistory.com/14" target="_blank" rel="noopener">VibeKorea</a>、<a href="https://www.aaa.com/tripcanvas/attraction/jagalchi-fish-market-VA14749" target="_blank" rel="noopener">AAA TripCanvas</a>、<a href="https://www.hk01.com/旅遊/418627/韓國旅遊-釜山札嘎其市場美食攻略-即買即食生章魚-帝王蟹" target="_blank" rel="noopener">HK01（2020，僅供參考）</a>。價格是別人當時的紀錄，以現場為準。</p>
-  </div>
-
-  <div class="card">
-    <h3 style="margin-top:0">💰 預算試算（4 人，以翔哥那桌約 200,000 韓元當基準）</h3>
-    <p class="small" style="margin-top:0">影片裡 3 人點了約 110,000 韓元的食材（鮑魚、魚、扇貝、帝王蟹等另加）。下面請自己填「現場問到的價格」，它會幫你加總並換算台幣。</p>
-    <div class="row"><span style="flex:0 0 auto">預算</span><input id="bgt" type="number" inputmode="numeric" value="200000"><span style="flex:0 0 auto">韓元</span></div>
-    <div class="quick" id="presetCrab"></div>
-    <div class="grid2" style="margin-top:8px">
-      <input id="bName" placeholder="品項（例：金蟹）">
-      <input id="bPrice" type="number" inputmode="numeric" placeholder="單價（韓元／公斤或份）">
-      <input id="bQty" type="number" inputmode="decimal" step="0.1" placeholder="數量（公斤或份，例：1.2）" value="1">
-      <button class="btn" onclick="addBudget()">＋ 加入</button>
-    </div>
-    <div id="bList" class="ledger-list"></div>
-    <div id="bSum" style="margin-top:8px"></div>
-    <div class="bar"><i id="bBar"></i></div>
-    <p class="small" style="margin-bottom:0">記得另外加上：<b>加工費＋座位費</b>（現場問）、小菜飲料、<b>回飯店的車資</b>。</p>
   </div>
 
   <div class="card" id="mapCard">
@@ -275,19 +258,6 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
   <div class="card">
     <h3 style="margin-top:0">🚖 D4 晚上回飯店</h3>
     <p style="margin:0">行程寫的是「南浦洞商圈後晚餐自理」，<b>集合時間、車子在哪接、要不要自己搭車回 central 7 hotel</b>，請出發前或 D4 早上問領隊。吃完海鮮的味道和冬夜的冷，可以先想好用計程車或叫車。</p>
-  </div>
-</section>
-
-<section id="shop">
-  <h2>🛍 通用必買：零食與小物</h2>
-  <div class="small" style="margin-bottom:8px">每天景點旁的必買在「每日行程」各天的「🛍 今日必買」；這裡是哪天都能買的。</div>
-  <div class="card">
-    <h3 style="margin-top:0">👧 給女兒的零食（來源：Funliday Olive Young 整理）</h3>
-    <ul style="padding-left:18px;margin:0;font-size:.92rem">
-      <li>Olive Young：花椰菜餅乾脆球、水果乾、椰子巧克力片、貝果餅乾。</li>
-      <li>Daiso：迷你椪糖藥果、椰子洋芋片（約 1,000～2,000 韓元，文章標示有出入）。</li>
-      <li>便利商店：CU 鄰家小胖藥菓、GS25 扁可頌餅乾、玉米海苔脆片。</li>
-    </ul>
   </div>
 </section>
 
@@ -463,7 +433,8 @@ const DAYS=[
    ['17:05','高雄起飛','7C6256（台灣時間）'],
    ['20:35','抵達釜山金海機場','韓國代表接機，入住 central 7 hotel','Gimhae International Airport']
   ],meals:['早：—','午：—','晚：機上不供餐'],
-  local:[['晚餐','抵達約 20:35、入住會很晚，晚餐請先在台灣機場或飛機上解決（機上不供餐），或到飯店後問櫃檯附近的便利商店。']]},
+  local:[['晚餐','抵達約 20:35、入住會很晚，晚餐請先在台灣機場或飛機上解決（機上不供餐），或到飯店後問櫃檯附近的便利商店。'],
+   ['🏪 飯店附近便利商店小逛','入住後可以順路逛一下便利商店，兩個女兒可以挑：CU 的鄰家小胖藥菓、GS25 的扁可頌餅乾、玉米海苔脆片。','來源：'+L('Funliday','https://www.funliday.com/posts/2026-korea-oliveyoung/')]]},
  {d:2,date:'12/4',wd:'五',title:'白淺灘・海苔博物館・龍宮寺・樂天 Outlet',c:'var(--d2)',
   items:[
    ['上午','白淺灘文化村＋海岸散步路','韓戰難民聚落轉型的文化村，影島的海邊小路','Huinnyeoul Culture Village'],
@@ -515,7 +486,7 @@ const DAYS=[
    ['','時尚彩妝店（購物站）','店內有人導覽，不想買可以先和領隊說'],
    ['下午','龍頭山公園＋釜山塔','不含展望台門票；從南浦站 7 號出口沿光復路走約 3 分鐘，搭手扶梯上','Yongdusan Park Busan Tower'],
    ['','南浦洞商圈','國際市場、光復洞時裝街、BIFF 國際電影廣場','BIFF Square Busan'],
-   ['傍晚','🦀 新東亞水產市場（自理晚餐）','南浦洞拱牌正對面；挑海鮮上樓料理。細節與預算見下方「新東亞」區塊','Sindonga Fish Market Busan']
+   ['傍晚','🦀 新東亞水產市場（自理晚餐）','南浦洞拱牌正對面；挑海鮮上樓料理。細節見下方「新東亞」區塊','Sindonga Fish Market Busan']
   ],meals:['早：飯店','午：龍蝦一隻雞海鮮鍋（龍蝦 2 人 1 隻）₩38,000','晚：自理 → 新東亞'],
   note:'⚠ 午餐已經吃海鮮鍋（含龍蝦），晚餐又要吃蟹，可以午餐吃八分飽；晚餐前在南浦洞逛街消化。回飯店的方式請先問領隊。',
   photo:[
@@ -547,7 +518,7 @@ const DAYS=[
   buy:[
    ['最後採買','這天只有早餐和去機場，<b>想買的前一天（D4）在南浦洞先買好</b>。']
   ],
-  local:[['🍪 最後採買','伴手禮可在前一天先買好（見「必買」）。這天只有早餐和去機場，我沒有安排額外景點。']]}
+  local:[['🍪 最後採買','伴手禮可在前幾天先買好（見 D2～D4 的「🛍 今日必買」）。這天只有早餐和去機場，我沒有安排額外景點。']]}
 ];
 const li=i=>`<li><div class="tm">${i[0]}</div><div><div class="ti">${i[1]}${i[3]?`<a class="pin" href="${MQ(i[3])}" target="_blank" rel="noopener">📍地圖</a>`:''}</div><div class="ds">${i[2]||''}</div></div></li>`;
 function renderDays(sel){
@@ -563,7 +534,7 @@ function renderDays(sel){
     ${x.photo?`<div class="local photo"><div class="lh">📸 拍照景點（角度・排隊）</div><ul>${x.photo.map(l=>`<li><b>${l[0]}</b><div style="margin-top:2px">${l[1]}</div>${l[2]?`<div class="src">${l[2]}</div>`:''}</li>`).join('')}</ul></div>`:''}
     ${x.buy?`<div class="local buy"><div class="lh">🛍 今日必買</div><ul>${x.buy.map(l=>`<li><b>${l[0]}</b> ${l[1]}${l[2]?`<div class="src">${l[2]}</div>`:''}</li>`).join('')}</ul></div>`:''}
     ${x.local?`<div class="local"><div class="lh">🍴 在地推薦（吃喝逛）</div><ul>${x.local.map(l=>`<li><b>${l[0]}</b> ${l[1]}${l[2]?`<div class="src">${l[2]}</div>`:''}</li>`).join('')}</ul></div>`:''}
-    ${x.d===4?'<p style="margin:10px 0 0"><a href="#sindonga">👉 看新東亞海鮮完整攻略與預算</a></p>':''}
+    ${x.d===4?'<p style="margin:10px 0 0"><a href="#sindonga">👉 看新東亞・札嘎其海鮮完整攻略</a></p>':''}
    </div>`).join('');
   const sd=document.getElementById('sindonga');if(sd)sd.style.display=(sel===0||sel===4)?'':'none';
 }
@@ -581,28 +552,10 @@ function conv(from){const r=RATE();
   else{const v=parseFloat(twd.value);krw.value=isNaN(v)||!r?'':Math.round(v/r)}
   out.textContent=krw.value?`₩${(+krw.value).toLocaleString()} ≈ NT$${(+twd.value).toLocaleString()}`:'—'}
 krw.oninput=()=>conv('krw');twd.oninput=()=>conv('twd');
-rateEl.oninput=()=>{store.set('rate',parseFloat(rateEl.value)||0.0233);conv('krw');renderBudget();renderLedger();if(typeof fillCrab==='function')fillCrab()};
+rateEl.oninput=()=>{store.set('rate',parseFloat(rateEl.value)||0.0233);conv('krw');renderLedger();if(typeof fillCrab==='function')fillCrab()};
 document.getElementById('quickKrw').innerHTML=[1000,2000,5000,10000,30000,100000].map(v=>`<button data-v="${v}">₩${v.toLocaleString()}</button>`).join('');
 document.getElementById('quickKrw').onclick=e=>{const b=e.target.closest('button');if(b){krw.value=b.dataset.v;conv('krw')}};
 
-/* ---------- 新東亞預算 ---------- */
-const bgt=document.getElementById('bgt');bgt.value=store.get('bgt',200000);
-let bud=store.get('bud',[]);
-const PRESETS=[['金蟹',90000],['藍蟹',120000],['紅蟹',135000],['松葉蟹',70000],['野生鮑魚',25000],['扇貝（一盤）',30000],['魚湯（小）',40000],['清蒸魚',50000]];
-document.getElementById('presetCrab').innerHTML=PRESETS.map((p,i)=>`<button data-i="${i}">${p[0]} ₩${p[1].toLocaleString()}</button>`).join('');
-document.getElementById('presetCrab').onclick=e=>{const b=e.target.closest('button');if(b){const p=PRESETS[+b.dataset.i];document.getElementById('bName').value=p[0];document.getElementById('bPrice').value=p[1]}};
-function addBudget(){const name=document.getElementById('bName').value.trim()||'未命名',price=parseFloat(document.getElementById('bPrice').value),qty=parseFloat(document.getElementById('bQty').value)||1;
-  if(!(price>0)){document.getElementById('bSum').textContent='請先輸入單價（韓元）';return}
-  bud.push({name,price,qty});store.set('bud',bud);document.getElementById('bName').value='';document.getElementById('bPrice').value='';document.getElementById('bQty').value=1;renderBudget()}
-function renderBudget(){
-  document.getElementById('bList').innerHTML=bud.map((x,i)=>`<div class="it"><span>${esc(x.name)}<br><span class="small">₩${x.price.toLocaleString()} × ${x.qty}</span></span><span>₩${Math.round(x.price*x.qty).toLocaleString()} <button class="x" data-i="${i}">✕</button></span></div>`).join('')||'<div class="small">還沒有品項。點上面的預設價，或自己輸入現場問到的價格（生蠔價格請自填）。</div>';
-  const tot=bud.reduce((s,x)=>s+x.price*x.qty,0),b=parseFloat(bgt.value)||0,r=RATE();
-  document.getElementById('bSum').innerHTML=`<span class="big">₩${Math.round(tot).toLocaleString()}</span> ≈ NT$${Math.round(tot*r).toLocaleString()}　<span class="small">預算 ₩${b.toLocaleString()}（≈ NT$${Math.round(b*r).toLocaleString()}），${tot>b?'<b style="color:var(--coral)">超出 ₩'+Math.round(tot-b).toLocaleString()+'</b>':'剩 ₩'+Math.round(b-tot).toLocaleString()}</span>`;
-  const bar=document.getElementById('bBar');bar.style.width=b?Math.min(100,tot/b*100)+'%':'0';bar.className=tot>b?'over':'';
-}
-document.getElementById('bList').onclick=e=>{const x=e.target.closest('.x');if(x){bud.splice(+x.dataset.i,1);store.set('bud',bud);renderBudget()}};
-bgt.oninput=()=>{store.set('bgt',parseFloat(bgt.value)||0);renderBudget()};
-renderBudget();
 function fillCrab(){const r=RATE(),f=(a,b)=>'約 NT$'+Math.round(a*r).toLocaleString()+(b?'～'+Math.round(b*r).toLocaleString():'');
   const m={cp1:[65000,90000],cp2:[85000,95000],cp3:[120000],cp4:[130000,140000],cp5:[70000]};
   for(const k in m){const e=document.getElementById(k);if(e)e.textContent=f(m[k][0],m[k][1])}}
