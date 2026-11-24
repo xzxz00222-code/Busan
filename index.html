@@ -524,8 +524,8 @@ const DAYS=[
   ],
   local:[['🍪 最後採買','伴手禮可在前幾天先買好（見 D2～D4 的「🛍 今日必買」）。這天只有早餐和去機場，我沒有安排額外景點。']]}
 ];
-/* 飯店都在西面，D1～D4 晚上回飯店後共用同一張「晚上續攤」卡 */
-(function(){const n=DAYS.find(z=>z.d===3).night;DAYS.forEach(z=>{if(z.d>=1&&z.d<=4&&!z.night)z.night=n})})();
+/* 飯店都在西面，D1～D3 晚上回飯店後共用同一張「晚上續攤」卡（D4 行程已滿，不放） */
+(function(){const n=DAYS.find(z=>z.d===3).night;DAYS.forEach(z=>{if(z.d>=1&&z.d<=3&&!z.night)z.night=n})})();
 const li=i=>`<li><div class="tm">${i[0]}</div><div><div class="ti">${i[1]}${i[3]?`<a class="pin" href="${MQ(i[3])}" target="_blank" rel="noopener">📍地圖</a>`:''}</div><div class="ds">${i[2]||''}</div></div></li>`;
 function renderDays(sel){
   document.getElementById('daybar').innerHTML=`<button data-d="0" class="${sel===0?'on':''}">全部<small>5 天</small></button>`+
