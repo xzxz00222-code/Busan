@@ -262,29 +262,18 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
   </div>
 
   <div class="card" id="mapCard">
-    <h3 style="margin-top:0">🗺 小地圖</h3>
-    <div class="quick" style="margin:0 0 8px"><button onclick="setMap(0)" id="mapB0" style="background:#dbe6ee">新東亞</button><button onclick="setMap(1)" id="mapB1">札嘎其市場</button></div>
-    <div style="border-radius:12px;overflow:hidden;border:1px solid var(--line)">
-      <iframe id="sdMap" title="新東亞水產綜合市場地圖" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:280px;border:0" src="https://maps.google.com/maps?q=%EC%8B%A0%EB%8F%99%EC%95%84%EC%88%98%EC%82%B0%EB%AC%BC%EC%A2%85%ED%95%A9%EC%8B%9C%EC%9E%A5&hl=zh-TW&z=17&output=embed"></iframe>
+    <h3 style="margin-top:0">🚶 怎麼走去吃</h3>
+    <div style="display:flex;align-items:stretch;gap:6px;text-align:center;font-size:.9rem">
+      <div style="flex:1;background:#eef4f9;border-radius:12px;padding:10px 6px"><div style="font-size:1.4rem">🛍</div><b>南浦洞</b><div class="small">拱牌、逛街</div></div>
+      <div style="flex:0 0 auto;align-self:center;color:var(--muted);font-size:.8rem">走過<br>馬路 ➜</div>
+      <div style="flex:1;background:var(--coral-soft);border-radius:12px;padding:10px 6px"><div style="font-size:1.4rem">🦀</div><b>新東亞</b><div class="small">＋ 旁邊札嘎其</div></div>
     </div>
-    <p class="small" style="margin:6px 0">地圖要連網才會顯示。韓文名稱：新東亞 <b>신동아수산물종합시장</b> <button class="copy" data-copy="신동아수산물종합시장">📋</button>　札嘎其 <b>자갈치시장</b> <button class="copy" data-copy="자갈치시장">📋</button></p>
-    <h3>🚶 從哪裡走過來（點了會開 Google 地圖的步行路線）</h3>
-    <div class="quick">
-      <a class="btn ghost" style="text-decoration:none;padding:6px 12px;font-size:.85rem" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=BIFF+Square+Busan&destination=%EC%8B%A0%EB%8F%99%EC%95%84%EC%88%98%EC%82%B0%EB%AC%BC%EC%A2%85%ED%95%A9%EC%8B%9C%EC%9E%A5+Busan&travelmode=walking">從 BIFF 廣場</a>
-      <a class="btn ghost" style="text-decoration:none;padding:6px 12px;font-size:.85rem" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Nampo-dong+Busan&destination=%EC%8B%A0%EB%8F%99%EC%95%84%EC%88%98%EC%82%B0%EB%AC%BC%EC%A2%85%ED%95%A9%EC%8B%9C%EC%9E%A5+Busan&travelmode=walking">從南浦洞商圈</a>
-      <a class="btn ghost" style="text-decoration:none;padding:6px 12px;font-size:.85rem" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Jagalchi+Station+Busan&destination=%EC%8B%A0%EB%8F%99%EC%95%84%EC%88%98%EC%82%B0%EB%AC%BC%EC%A2%85%ED%95%A9%EC%8B%9C%EC%9E%A5+Busan&travelmode=walking">從札嘎其站</a>
-      <a class="btn ghost" style="text-decoration:none;padding:6px 12px;font-size:.85rem" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Yongdusan+Park+Busan&destination=%EC%8B%A0%EB%8F%99%EC%95%84%EC%88%98%EC%82%B0%EB%AC%BC%EC%A2%85%ED%95%A9%EC%8B%9C%EC%9E%A5+Busan&travelmode=walking">從龍頭山公園</a>
-      <a class="btn ghost" style="text-decoration:none;padding:6px 12px;font-size:.85rem" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=BIFF+Square+Busan&destination=%EC%9E%90%EA%B0%88%EC%B9%98%EC%8B%9C%EC%9E%A5+Busan&travelmode=walking">BIFF 廣場→札嘎其</a>
-    </div>
-    <p class="small" style="margin:6px 0 0">路線由 Google 地圖即時算，我不自己畫路線，避免走錯。</p>
-    <h3>📍 已知的相對位置（有來源）</h3>
-    <ul style="padding-left:18px;margin:0;font-size:.92rem">
-      <li>新東亞與札嘎其市場是<b>相鄰的兩棟</b>，在<b>南浦洞拱牌商圈的正對面</b>（翔哥影片）。</li>
-      <li>1 號線<b>札嘎其站</b>步行約 3 分鐘到新東亞，離札嘎其市場約 1 分鐘。</li>
-      <li>從 BIFF 廣場<b>往南走</b>就是札嘎其市場，步行約 3 分鐘（新東亞在它旁邊，所以方向相同）。</li>
-      <li>龍頭山公園從南浦站 7 號出口，沿光復路走約 3 分鐘搭手扶梯上去。</li>
-    </ul>
-    <div class="note gold" style="margin-bottom:0">這是<b>示意說明，不是比例地圖</b>。晚上天黑又冷，走路請用手機導航，結伴同行，尤其帶兩個女兒要留意過馬路。</div>
+    <p class="small" style="margin:6px 0 10px">示意圖，不是比例地圖。新東亞在南浦洞拱牌的<b>正對面</b>，旁邊是札嘎其市場。</p>
+    <a class="btn" style="display:block;text-align:center;text-decoration:none;padding:12px;font-size:1rem;margin-bottom:8px" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=%EC%8B%A0%EB%8F%99%EC%95%84%EC%88%98%EC%82%B0%EB%AC%BC%EC%A2%85%ED%95%A9%EC%8B%9C%EC%9E%A5+Busan&travelmode=walking">📍 帶我走去新東亞（開 Google 地圖導航）</a>
+    <a class="btn ghost" style="display:block;text-align:center;text-decoration:none;padding:10px;margin-bottom:10px" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=%EC%9E%90%EA%B0%88%EC%B9%98%EC%8B%9C%EC%9E%A5+Busan&travelmode=walking">📍 帶我走去札嘎其市場</a>
+    <div class="small">按鈕會從<b>你現在的位置</b>開始算路線，要開手機定位。看不懂韓文地圖時，把下面的字給計程車司機看或貼到地圖搜尋：</div>
+    <div class="row" style="margin-top:6px"><div style="flex:1;background:#eef4f9;border-radius:10px;padding:8px 10px"><b>신동아수산물종합시장</b> <button class="copy" data-copy="신동아수산물종합시장">📋</button></div><div style="flex:1;background:#eef4f9;border-radius:10px;padding:8px 10px"><b>자갈치시장</b> <button class="copy" data-copy="자갈치시장">📋</button></div></div>
+    <div class="note gold" style="margin-bottom:0">晚上天黑又冷，走路用導航、結伴走，帶兩個女兒過馬路要留意。</div>
   </div>
 
   <div class="card">
@@ -465,8 +454,6 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if
 
 /* 點「新東亞」連結：先切到 D4 再捲過去 */
 document.addEventListener('click',e=>{const a=e.target.closest('a[href="#sindonga"]');if(a){e.preventDefault();renderDays(4);setTimeout(()=>document.getElementById('sindonga').scrollIntoView({behavior:'smooth'}),30)}});
-const MAPS=['%EC%8B%A0%EB%8F%99%EC%95%84%EC%88%98%EC%82%B0%EB%AC%BC%EC%A2%85%ED%95%A9%EC%8B%9C%EC%9E%A5','%EC%9E%90%EA%B0%88%EC%B9%98%EC%8B%9C%EC%9E%A5'];
-function setMap(i){document.getElementById('sdMap').src='https://maps.google.com/maps?q='+MAPS[i]+'&hl=zh-TW&z=17&output=embed';document.getElementById('mapB0').style.background=i===0?'#dbe6ee':'';document.getElementById('mapB1').style.background=i===1?'#dbe6ee':''}
 /* 小編區：預設隱藏，點上方「小編」展開 */
 function toggleEditor(show){const e=document.getElementById('editor');e.style.display=show?'':'none';if(show)e.scrollIntoView({behavior:'smooth'})}
 document.addEventListener('click',e=>{const a=e.target.closest('a[href="#editor"]');if(a){e.preventDefault();toggleEditor(true)}});
