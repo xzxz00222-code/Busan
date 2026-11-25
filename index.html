@@ -173,7 +173,6 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
     <div class="small">回程｜12/7（一）｜濟州航空 7C6255</div>
     <div class="flight"><div class="ap"><div class="code">PUS</div><div class="t">14:05</div><div class="c">釜山金海</div></div><div class="mid">約 3 小時<div class="line"></div>直飛</div><div class="ap"><div class="code">KHH</div><div class="t">16:05</div><div class="c">高雄</div></div></div>
   </div>
-  <div class="note gold">🧳 集合：12/3 <b>14:05</b>，小港國際航廈 3 樓，濟州航空由台勤櫃檯代理，找領隊。託運每人 1 件 20 公斤。護照效期要到 <b>2027/06/07</b> 之後。小費每人每天 NT$300，共 NT$1,500。<br>※ 來源：東南旅遊行前說明會頁面（2026/11/13 更新），時間以最新通知為準。</div>
 </section>
 
 <section id="hotel">
@@ -426,7 +425,7 @@ const L=(t,u)=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`;
 const DAYS=[
  {d:1,date:'12/3',wd:'四',title:'高雄出發・抵達釜山',c:'var(--d1)',
   items:[
-   ['14:05','小港國際航廈 3 樓集合','濟州航空櫃檯（台勤代理），找領隊'],
+   ['14:05','小港國際航廈 3 樓集合','濟州航空櫃檯（台勤代理），找領隊。託運每人 1 件 20 公斤。<br><span class="small">※ 來源：東南旅遊行前說明會頁面（2026/11/13 更新），時間以最新通知為準</span>'],
    ['17:05','高雄起飛','7C6256（台灣時間）'],
    ['20:35','抵達釜山金海機場','韓國代表接機，入住 central 7 hotel','Gimhae International Airport']
   ],meals:['早：—','午：—','晚：機上不供餐'],
@@ -522,7 +521,7 @@ const DAYS=[
 ];
 /* 飯店都在西面，D1～D3 晚上回飯店後共用同一張「晚上續攤」卡（D4 行程已滿，不放） */
 (function(){const n=DAYS.find(z=>z.d===3).night;DAYS.forEach(z=>{if(z.d>=1&&z.d<=3&&!z.night)z.night=n})})();
-const CHK_ITEMS=['護照（效期需到 2027/06/07 之後）','機票確認 7C6256／7C6255','旅平險＋旅遊不便險','韓元現金（市場、小吃、現金攤用）','信用卡（確認海外手續費）','網卡／eSIM','防風羽絨外套、圍巾、手套、護耳帽','暖暖包、護唇膏','防滑厚底鞋','拖鞋、牙刷牙膏（飯店不一定提供）','行動電源（放隨身行李）、韓國插頭轉接','個人藥品、兩個女兒的常備藥','小孩備用衣物（海邊風大）','問領隊 D4 晚上集合與回飯店方式','查新東亞營業時間（Naver／Google 地圖）','小費 NT$1,500（每人每天 300）'];
+const CHK_ITEMS=['護照（效期需到 2027/06/07 之後）','機票確認 7C6256／7C6255','旅平險＋旅遊不便險','韓元現金（市場、小吃、現金攤用）','信用卡（確認海外手續費）','網卡／eSIM','防風羽絨外套、圍巾、手套、護耳帽','暖暖包、護唇膏','防滑厚底鞋','拖鞋、牙刷牙膏（飯店不一定提供）','行動電源（放隨身行李）、韓國插頭轉接','個人藥品、兩個女兒的常備藥','小孩備用衣物（海邊風大）','問領隊 D4 晚上集合與回飯店方式','查新東亞營業時間（Naver／Google 地圖）','小費 NT$1,500，現金備好（每人每天 300）'];
 const CHK_GROUPS=[['🪪 證件・保險',[0,1,2]],['💴 錢・網路',[3,4,15,5]],['🧳 穿著・行李',[6,7,8,9,10,11,12]],['🗣 出發前問／查',[13,14]]];
 function renderChk(){
   const box=document.getElementById('chkBox');if(!box)return;
