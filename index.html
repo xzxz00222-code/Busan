@@ -80,6 +80,8 @@ h3{font-size:1.05rem;margin:16px 0 8px}
 .local li{margin:3px 0}
 .local.buy{background:#eef7f6;border-color:#9fd1cc}
 .local.buy .lh{color:#0f6b66}
+.local.fest{background:#fdeeee;border-color:#e8a5a0}
+.local.fest .lh{color:#b3342b}
 .local.night{background:#e9eefb;border-color:#9fb2e0}
 .local.night .lh{color:#1d4e89}
 .local.photo{background:#f4f0fb;border-color:#c9b8ea}
@@ -116,6 +118,17 @@ input,select{font:inherit;border:1px solid var(--line);border-radius:10px;paddin
 .phr .zh{font-weight:600}
 .phr .ko{font-size:1.15rem}
 .phr .rd{font-size:.8rem;color:var(--muted)}
+.chk-wrap{background:var(--navy-soft);border:1px solid #bcd3ee;border-radius:14px;padding:12px 12px 6px;margin:10px 0 14px}
+.chk-h{display:flex;justify-content:space-between;align-items:center;font-size:1rem}
+.chk-n{background:#fff;color:var(--navy);border-radius:999px;padding:1px 12px;font-size:.85rem;font-weight:700;font-variant-numeric:tabular-nums}
+.chk-n.ok{background:var(--teal);color:#fff}
+.chk-bar{height:6px;background:#fff;border-radius:99px;margin:8px 0 4px;overflow:hidden}
+.chk-bar i{display:block;height:100%;background:var(--d1);border-radius:99px;transition:width .25s}
+.chk-g{font-size:.78rem;font-weight:700;color:var(--navy);letter-spacing:.04em;margin:10px 0 2px}
+.chk-i{display:flex;gap:10px;align-items:center;min-height:42px;padding:4px 2px;border-top:1px solid #cfe0f3;cursor:pointer;font-size:.93rem}
+.chk-i input{width:22px;height:22px;flex:none;margin:0;accent-color:var(--d1)}
+.chk-i input:checked+span{text-decoration:line-through;color:var(--muted)}
+.chk-done{text-align:center;font-weight:700;color:var(--teal);padding:10px 0 6px}
 .check li{list-style:none;margin:4px 0}
 .check label{display:flex;gap:8px;align-items:flex-start;cursor:pointer}
 .check input{width:auto;margin-top:5px}
@@ -309,10 +322,6 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
     <div class="note tip" style="margin-bottom:0">發音是注音式的大概念，給店家看韓文最準。🔊 用手機內建語音，沒有韓語語音的手機不會顯示喇叭。</div>
   </div>
 
-  <div class="card">
-    <h3 style="margin-top:0">✅ 出發前檢查清單</h3>
-    <ul class="check" id="checklist" style="padding:0;margin:0"></ul>
-  </div>
 </section>
 
 <section id="tips">
@@ -526,6 +535,23 @@ const DAYS=[
 ];
 /* 飯店都在西面，D1～D3 晚上回飯店後共用同一張「晚上續攤」卡（D4 行程已滿，不放） */
 (function(){const n=DAYS.find(z=>z.d===3).night;DAYS.forEach(z=>{if(z.d>=1&&z.d<=3&&!z.night)z.night=n})})();
+const CHK_ITEMS=['護照（效期需到 2027/06/07 之後）','機票確認 7C6256／7C6255','旅平險＋旅遊不便險','韓元現金（市場、小吃、現金攤用）','信用卡（確認海外手續費）','網卡／eSIM','防風羽絨外套、圍巾、手套、護耳帽','暖暖包、護唇膏','防滑厚底鞋','拖鞋、牙刷牙膏（飯店不一定提供）','行動電源（放隨身行李）、韓國插頭轉接','個人藥品、兩個女兒的常備藥','小孩備用衣物（海邊風大、汗蒸幕）','問領隊 D4 晚上集合與回飯店方式','查新東亞營業時間（Naver／Google 地圖）','小費 NT$1,500（每人每天 300）'];
+const CHK_GROUPS=[['🪪 證件・保險',[0,1,2]],['💴 錢・網路',[3,4,15,5]],['🧳 穿著・行李',[6,7,8,9,10,11,12]],['🗣 出發前問／查',[13,14]]];
+function renderChk(){
+  const box=document.getElementById('chkBox');if(!box)return;
+  const st=store.get('chk',{}),n=CHK_ITEMS.length,done=CHK_ITEMS.filter((_,i)=>st[i]).length;
+  box.innerHTML=`<div class="chk-h"><b>✅ 出發前檢查清單</b><span class="chk-n${done===n?' ok':''}">${done}／${n}</span></div><div class="chk-bar"><i style="width:${done/n*100}%"></i></div>`
+   +CHK_GROUPS.map(([t,ix])=>`<div class="chk-g">${t}</div>`+ix.map(i=>`<label class="chk-i"><input type="checkbox" data-i="${i}" ${st[i]?'checked':''}><span>${esc(CHK_ITEMS[i])}</span></label>`).join('')).join('')
+   +(done===n?'<div class="chk-done">🎉 都備好了，出發！</div>':'');
+  box.onchange=e=>{const s=store.get('chk',{});s[e.target.dataset.i]=e.target.checked;store.set('chk',s);renderChk()};
+}
+const FEST=`<div class="local fest"><div class="lh">🎄 釜山·節慶活動</div>
+  <div style="font-size:.92rem"><b>西面燈光節</b>｜免費<br>
+  期間：10/29～2/14，你們 12/3～12/5 晚上都看得到。<br>
+  離飯店：在西面商圈，飯店走到西面站約 7 分鐘（<a href="https://www.expedia.com/go/hotel/info/4672750" target="_blank" rel="noopener">Expedia 資料</a>），回飯店後可以順路逛。
+  <a class="pin" href="${MQ('Seomyeon Station Busan')}" target="_blank" rel="noopener">📍西面站</a><br>
+  <span class="small">點燈時間與確切位置貼文沒寫，出發前再查 Naver／Google 地圖或問領隊。晚上約 0 度，記得穿暖。</span></div>
+  <div class="src">來源：<a href="https://www.threads.com/share/_iRgv1gTX" target="_blank" rel="noopener">BUSAN TAXI Threads 貼文</a>（日期以現場公告為準）</div></div>`;
 const li=i=>`<li><div class="tm">${i[0]}</div><div><div class="ti">${i[1]}${i[3]?`<a class="pin" href="${MQ(i[3])}" target="_blank" rel="noopener">📍地圖</a>`:''}</div><div class="ds">${i[2]||''}</div></div></li>`;
 function renderDays(sel){
   document.getElementById('daybar').innerHTML=`<button data-d="0" class="${sel===0?'on':''}">全部<small>5 天</small></button>`+
@@ -535,14 +561,17 @@ function renderDays(sel){
     <div class="dh"><h3>Day ${x.d}・${x.date}（${x.wd}）${x.title}</h3></div>
     <div class="meta"><span>🏨 central 7 hotel</span><span>🌡️ 約 0～10°C</span></div>
     ${x.note?`<div class="note imp" style="margin:4px 0 6px">${x.note}</div>`:''}
+    ${x.d===1?'<div class="chk-wrap" id="chkBox"></div>':''}
     <ul class="tl">${x.items.map(li).join('')}</ul>
     <div class="meals">${x.meals.map(m=>`<span>🍽️ ${m}</span>`).join('')}</div>
     ${x.photo?`<div class="local photo"><div class="lh">📸 拍照景點（角度・排隊）</div><ul>${x.photo.map(l=>`<li><b>${l[0]}</b><div style="margin-top:2px">${l[1]}</div>${l[2]?`<div class="src">${l[2]}</div>`:''}</li>`).join('')}</ul></div>`:''}
     ${x.buy?`<div class="local buy"><div class="lh">🛍 今日必買</div><ul>${x.buy.map(l=>`<li><b>${l[0]}</b> ${l[1]}${l[2]?`<div class="src">${l[2]}</div>`:''}</li>`).join('')}</ul></div>`:''}
     ${x.local?`<div class="local"><div class="lh">🍴 在地推薦（吃喝逛）</div><ul>${x.local.map(l=>`<li><b>${l[0]}</b> ${l[1]}${l[2]?`<div class="src">${l[2]}</div>`:''}</li>`).join('')}</ul></div>`:''}
     ${x.night?`<div class="local night"><div class="lh">${x.night[0]}</div><div style="font-size:.92rem">${x.night[1]}</div>${x.night[2]?`<div class="src">${x.night[2]}</div>`:''}</div>`:''}
+    ${x.d>=1&&x.d<=3?FEST:''}
     ${x.d===4?'<p style="margin:10px 0 0"><a href="#sindonga">👉 看新東亞・札嘎其海鮮完整攻略</a></p>':''}
    </div>`).join('');
+  renderChk();
   const sd=document.getElementById('sindonga');if(sd)sd.style.display=(sel===0||sel===4)?'':'none';
 }
 document.getElementById('daybar').addEventListener('click',e=>{const b=e.target.closest('button');if(b){renderDays(+b.dataset.d);const y=document.getElementById('dayList').getBoundingClientRect().top+scrollY-120;if(scrollY>y)scrollTo({top:y,behavior:'smooth'})}});
@@ -630,7 +659,6 @@ function checklist(id,items,key){
   document.getElementById(id).innerHTML=items.map((t,i)=>`<li><label><input type="checkbox" data-i="${i}" ${st[i]?'checked':''}><span>${t}</span></label></li>`).join('');
   document.getElementById(id).onchange=e=>{const s=store.get(key,{});s[e.target.dataset.i]=e.target.checked;store.set(key,s)};
 }
-checklist('checklist',['護照（效期需到 2027/06/07 之後）','機票確認 7C6256／7C6255','旅平險＋旅遊不便險','韓元現金（市場、小吃、現金攤用）','信用卡（確認海外手續費）','網卡／eSIM','防風羽絨外套、圍巾、手套、護耳帽','暖暖包、護唇膏','防滑厚底鞋','拖鞋、牙刷牙膏（飯店不一定提供）','行動電源（放隨身行李）、韓國插頭轉接','個人藥品、兩個女兒的常備藥','小孩備用衣物（海邊風大、汗蒸幕）','問領隊 D4 晚上集合與回飯店方式','查新東亞營業時間（Naver／Google 地圖）','小費 NT$1,500（每人每天 300）'],'chk');
 </script>
 </body>
 </html>
