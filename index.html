@@ -118,6 +118,8 @@ input,select{font:inherit;border:1px solid var(--line);border-radius:10px;paddin
 .phr .zh{font-weight:600}
 .phr .ko{font-size:1.15rem}
 .phr .rd{font-size:.8rem;color:var(--muted)}
+.emerg{background:var(--coral-soft);border:1px solid #f1bdb4;border-radius:14px;padding:10px 12px;margin-top:12px}
+.emerg-h{font-weight:700;font-size:1rem;margin-bottom:6px}
 .tipsbox{background:var(--gold-soft);border:1px solid #ecd9a3;border-radius:14px;padding:12px 12px 4px;margin:0 0 14px}
 .tip-h{font-weight:700;font-size:1rem;margin-bottom:6px}
 .tip-b{background:#fff;border-radius:12px;padding:10px 12px;margin-bottom:10px}
@@ -537,7 +539,8 @@ const FEST=`<div class="local fest"><div class="lh">🎄 釜山·節慶活動</d
   <a class="pin" href="${MQ('Seomyeon Station Busan')}" target="_blank" rel="noopener">📍西面站</a><br>
   <span class="small">點燈時間與確切位置貼文沒寫，出發前再查 Naver／Google 地圖或問領隊。晚上約 0 度，記得穿暖。</span></div>
   <div class="src">來源：<a href="https://www.threads.com/share/_iRgv1gTX" target="_blank" rel="noopener">BUSAN TAXI Threads 貼文</a>（日期以現場公告為準）</div></div>`;
-const TIPS=`<div class="tipsbox"><div class="tip-h">⚠ 重要提醒</div><div class="tip-b">    <h4>🧥 12 月穿著（來源：Creatrip、uptogo）</h4>    <ul style="padding-left:18px;margin:0">      <li>白天約 5～10 度，早晚接近 0 度或更低，海風大、體感更冷，下雪機率低。</li>      <li>洋蔥式穿法，外層防風長版羽絨外套；帶圍巾、手套、護耳帽、暖暖包、護唇膏，穿防滑厚底靴。</li>      <li>室內和地鐵暖氣強，外套要好穿脫。<b>海邊景點（龍宮寺、青沙浦、白淺灘）風最大</b>，小孩要多一件。</li>    </ul></div><div class="tip-b">    <h4>🆘 緊急聯絡</h4>    <div class="kv"><b>領隊</b><span>聯絡方式見行前說明會頁面或旅行社 LINE 群組</span><b>旅外救助</b><span>800-0885-0885 <button class="copy" data-copy="800-0885-0885">📋</button></span><b>飯店</b><span>+82-51-930-1100</span></div>    <p class="small" style="margin-bottom:0">旅行社專屬 LINE 群組在行前說明會頁面的連結。</p></div></div>`;
+const TIPS=`<div class="tipsbox"><div class="tip-h">⚠ 重要提醒</div><div class="tip-b">    <h4>🧥 12 月穿著（來源：Creatrip、uptogo）</h4>    <ul style="padding-left:18px;margin:0">      <li>白天約 5～10 度，早晚接近 0 度或更低，海風大、體感更冷，下雪機率低。</li>      <li>洋蔥式穿法，外層防風長版羽絨外套；帶圍巾、手套、護耳帽、暖暖包、護唇膏，穿防滑厚底靴。</li>      <li>室內和地鐵暖氣強，外套要好穿脫。<b>海邊景點（龍宮寺、青沙浦、白淺灘）風最大</b>，小孩要多一件。</li>    </ul></div></div>`;
+const EMERG=`<div class="emerg"><div class="emerg-h">🆘 緊急聯絡</div>    <div class="kv"><b>領隊</b><span>聯絡方式見行前說明會頁面或旅行社 LINE 群組</span><b>旅外救助</b><span>800-0885-0885 <button class="copy" data-copy="800-0885-0885">📋</button></span><b>飯店</b><span>+82-51-930-1100</span></div>    <p class="small" style="margin-bottom:0">旅行社專屬 LINE 群組在行前說明會頁面的連結。</p></div>`;
 const li=i=>`<li><div class="tm">${i[0]}</div><div><div class="ti">${i[1]}${i[3]?`<a class="pin" href="${MQ(i[3])}" target="_blank" rel="noopener">📍地圖</a>`:''}</div><div class="ds">${i[2]||''}</div></div></li>`;
 function renderDays(sel){
   document.getElementById('daybar').innerHTML=`<button data-d="0" class="${sel===0?'on':''}">全部<small>5 天</small></button>`+
@@ -555,6 +558,7 @@ function renderDays(sel){
     ${x.local?`<div class="local"><div class="lh">🍴 在地推薦（吃喝逛）</div><ul>${x.local.map(l=>`<li><b>${l[0]}</b> ${l[1]}${l[2]?`<div class="src">${l[2]}</div>`:''}</li>`).join('')}</ul></div>`:''}
     ${x.night?`<div class="local night"><div class="lh">${x.night[0]}</div><div style="font-size:.92rem">${x.night[1]}</div>${x.night[2]?`<div class="src">${x.night[2]}</div>`:''}</div>`:''}
     ${x.d>=1&&x.d<=3?FEST:''}
+    ${x.d===1?EMERG:''}
     ${x.d===4?'<p style="margin:10px 0 0"><a href="#sindonga">👉 看新東亞・札嘎其海鮮完整攻略</a></p>':''}
    </div>`).join('');
   renderChk();
