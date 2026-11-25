@@ -425,6 +425,8 @@ const L=(t,u)=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`;
 const DAYS=[
  {d:1,date:'12/3',wd:'四',title:'高雄出發・抵達釜山',c:'var(--d1)',
   localTitle:'🛬 抵達當晚（晚餐・便利商店）',
+  nightTitle:'🌙 入住後・宵夜續攤',
+  nightNote:'<b style="color:#b3342b">⚠ 第一晚約 22:00～22:30 才到飯店</b>：① 味贊王最後點餐 22:00，來不及。建議選營業到凌晨或 24 小時的店：② 아는오빠포차（到 04:00）、Seomyeon 656（到 03:00）、③ 螞蟻家、④ 韓砂鍋。<br>',
   items:[
    ['14:05','小港國際航廈 3 樓集合','濟州航空櫃檯（台勤代理），找領隊。託運每人 1 件 20 公斤。<br><span class="small">※ 來源：東南旅遊行前說明會頁面（2026/11/13 更新），時間以最新通知為準</span>'],
    ['17:05','高雄起飛','7C6256（台灣時間）'],
@@ -557,7 +559,7 @@ function renderDays(sel){
     ${x.photo?`<div class="local photo"><div class="lh">📸 拍照景點（角度・排隊）</div><ul>${x.photo.map(l=>`<li><b>${l[0]}</b><div style="margin-top:2px">${l[1]}</div>${l[2]?`<div class="src">${l[2]}</div>`:''}</li>`).join('')}</ul></div>`:''}
     ${x.buy?`<div class="local buy"><div class="lh">🛍 今日必買</div><ul>${x.buy.map(l=>`<li><b>${l[0]}</b> ${l[1]}${l[2]?`<div class="src">${l[2]}</div>`:''}</li>`).join('')}</ul></div>`:''}
     ${x.local?`<div class="local"><div class="lh">${x.localTitle||'🍴 在地推薦（吃喝逛）'}</div><ul>${x.local.map(l=>`<li><b>${l[0]}</b> ${l[1]}${l[2]?`<div class="src">${l[2]}</div>`:''}</li>`).join('')}</ul></div>`:''}
-    ${x.night?`<div class="local night"><div class="lh">${x.night[0]}</div><div style="font-size:.92rem">${x.night[1]}</div>${x.night[2]?`<div class="src">${x.night[2]}</div>`:''}</div>`:''}
+    ${x.night?`<div class="local night"><div class="lh">${x.nightTitle||x.night[0]}</div><div style="font-size:.92rem">${x.nightNote||''}${x.night[1]}</div>${x.night[2]?`<div class="src">${x.night[2]}</div>`:''}</div>`:''}
     ${x.d>=2&&x.d<=3?FEST:''}
     ${x.d===1?EMERG:''}
     ${x.d===4?'<p style="margin:10px 0 0"><a href="#sindonga">👉 看新東亞・札嘎其海鮮完整攻略</a></p>':''}
