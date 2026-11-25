@@ -118,6 +118,10 @@ input,select{font:inherit;border:1px solid var(--line);border-radius:10px;paddin
 .phr .zh{font-weight:600}
 .phr .ko{font-size:1.15rem}
 .phr .rd{font-size:.8rem;color:var(--muted)}
+.tipsbox{background:var(--gold-soft);border:1px solid #ecd9a3;border-radius:14px;padding:12px 12px 4px;margin:0 0 14px}
+.tip-h{font-weight:700;font-size:1rem;margin-bottom:6px}
+.tip-b{background:#fff;border-radius:12px;padding:10px 12px;margin-bottom:10px}
+.tip-b h4{margin:0 0 6px;font-size:.95rem}
 .chk-wrap{background:var(--navy-soft);border:1px solid #bcd3ee;border-radius:14px;padding:12px 12px 6px;margin:10px 0 14px}
 .chk-h{display:flex;justify-content:space-between;align-items:center;font-size:1rem}
 .chk-n{background:#fff;color:var(--navy);border-radius:999px;padding:1px 12px;font-size:.85rem;font-weight:700;font-variant-numeric:tabular-nums}
@@ -154,7 +158,7 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
 <div class="wrap">
 <nav class="jump">
   <a href="#flight">✈ 航班</a><a href="#hotel">🏨 住宿</a><a href="#days">📅 每日行程</a>
-  <a href="#sindonga">🦀 新東亞・札嘎其</a><a href="#tools">🧰 工具</a><a href="#tips">⚠ 提醒</a><a href="#editor">📱 小編</a>
+  <a href="#sindonga">🦀 新東亞・札嘎其</a><a href="#tools">🧰 工具</a><a href="#editor">📱 小編</a>
 </nav>
 
 <section id="flight">
@@ -324,22 +328,6 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
 
 </section>
 
-<section id="tips">
-  <h2>⚠ 重要提醒</h2>
-  <div class="card">
-    <h3 style="margin-top:0">🧥 12 月穿著（來源：Creatrip、uptogo）</h3>
-    <ul style="padding-left:18px;margin:0">
-      <li>白天約 5～10 度，早晚接近 0 度或更低，海風大、體感更冷，下雪機率低。</li>
-      <li>洋蔥式穿法，外層防風長版羽絨外套；帶圍巾、手套、護耳帽、暖暖包、護唇膏，穿防滑厚底靴。</li>
-      <li>室內和地鐵暖氣強，外套要好穿脫。<b>海邊景點（龍宮寺、青沙浦、白淺灘）風最大</b>，小孩要多一件。</li>
-    </ul>
-  </div>
-  <div class="card">
-    <h3 style="margin-top:0">🆘 緊急聯絡</h3>
-    <div class="kv"><b>領隊</b><span>聯絡方式見行前說明會頁面或旅行社 LINE 群組</span><b>旅外救助</b><span>800-0885-0885 <button class="copy" data-copy="800-0885-0885">📋</button></span><b>飯店</b><span>+82-51-930-1100</span></div>
-    <p class="small" style="margin-bottom:0">旅行社專屬 LINE 群組在行前說明會頁面的連結。</p>
-  </div>
-</section>
 
 <section id="editor" style="display:none">
   <h2>📱 小編拍攝筆記 <button class="btn ghost" style="margin-left:auto;padding:4px 12px;font-size:.8rem" onclick="toggleEditor(false)">收起</button></h2>
@@ -549,6 +537,7 @@ const FEST=`<div class="local fest"><div class="lh">🎄 釜山·節慶活動</d
   <a class="pin" href="${MQ('Seomyeon Station Busan')}" target="_blank" rel="noopener">📍西面站</a><br>
   <span class="small">點燈時間與確切位置貼文沒寫，出發前再查 Naver／Google 地圖或問領隊。晚上約 0 度，記得穿暖。</span></div>
   <div class="src">來源：<a href="https://www.threads.com/share/_iRgv1gTX" target="_blank" rel="noopener">BUSAN TAXI Threads 貼文</a>（日期以現場公告為準）</div></div>`;
+const TIPS=`<div class="tipsbox"><div class="tip-h">⚠ 重要提醒</div><div class="tip-b">    <h4>🧥 12 月穿著（來源：Creatrip、uptogo）</h4>    <ul style="padding-left:18px;margin:0">      <li>白天約 5～10 度，早晚接近 0 度或更低，海風大、體感更冷，下雪機率低。</li>      <li>洋蔥式穿法，外層防風長版羽絨外套；帶圍巾、手套、護耳帽、暖暖包、護唇膏，穿防滑厚底靴。</li>      <li>室內和地鐵暖氣強，外套要好穿脫。<b>海邊景點（龍宮寺、青沙浦、白淺灘）風最大</b>，小孩要多一件。</li>    </ul></div><div class="tip-b">    <h4>🆘 緊急聯絡</h4>    <div class="kv"><b>領隊</b><span>聯絡方式見行前說明會頁面或旅行社 LINE 群組</span><b>旅外救助</b><span>800-0885-0885 <button class="copy" data-copy="800-0885-0885">📋</button></span><b>飯店</b><span>+82-51-930-1100</span></div>    <p class="small" style="margin-bottom:0">旅行社專屬 LINE 群組在行前說明會頁面的連結。</p></div></div>`;
 const li=i=>`<li><div class="tm">${i[0]}</div><div><div class="ti">${i[1]}${i[3]?`<a class="pin" href="${MQ(i[3])}" target="_blank" rel="noopener">📍地圖</a>`:''}</div><div class="ds">${i[2]||''}</div></div></li>`;
 function renderDays(sel){
   document.getElementById('daybar').innerHTML=`<button data-d="0" class="${sel===0?'on':''}">全部<small>5 天</small></button>`+
@@ -558,7 +547,7 @@ function renderDays(sel){
     <div class="dh"><h3>Day ${x.d}・${x.date}（${x.wd}）${x.title}</h3></div>
     <div class="meta"><span>🏨 central 7 hotel</span><span>🌡️ 約 0～10°C</span></div>
     ${x.note?`<div class="note imp" style="margin:4px 0 6px">${x.note}</div>`:''}
-    ${x.d===1?'<div class="chk-wrap" id="chkBox"></div>':''}
+    ${x.d===1?'<div class="chk-wrap" id="chkBox"></div>'+TIPS:''}
     <ul class="tl">${x.items.map(li).join('')}</ul>
     <div class="meals">${x.meals.map(m=>`<span>🍽️ ${m}</span>`).join('')}</div>
     ${x.photo?`<div class="local photo"><div class="lh">📸 拍照景點（角度・排隊）</div><ul>${x.photo.map(l=>`<li><b>${l[0]}</b><div style="margin-top:2px">${l[1]}</div>${l[2]?`<div class="src">${l[2]}</div>`:''}</li>`).join('')}</ul></div>`:''}
